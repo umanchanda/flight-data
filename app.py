@@ -60,6 +60,9 @@ st.divider()
 with st.sidebar:
     st.header("Filters")
 
+    years = sorted(df["date"].dt.year.dropna().unique().astype(int), reverse=True)
+    sel_years = st.multiselect("Year", years)
+
     airlines = sorted(df["airline"].dropna().unique())
     sel_airlines = st.multiselect("Airline", airlines)
 
@@ -91,6 +94,8 @@ with st.sidebar:
     sel_dates = st.date_input("Date range", value=(date_min, date_max))
 
 filtered = df.copy()
+if sel_years:
+    filtered = filtered[filtered["date"].dt.year.isin(sel_years)]
 if sel_airlines:
     filtered = filtered[filtered["airline"].isin(sel_airlines)]
 if sel_from:
