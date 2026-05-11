@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+from registration_lookup import fetch_registration
 
 load_dotenv()
 
@@ -79,6 +80,23 @@ class AirportSummary(BaseModel):
     departures: int
     arrivals: int
     total_visits: int
+
+
+class RegistrationMeta(BaseModel):
+    registration: str
+    manufacturer: Optional[str]
+    model: Optional[str]
+    icao_type: Optional[str]
+    operator: Optional[str]
+    country: Optional[str]
+    mode_s: Optional[str]
+    photo_url: Optional[str]
+    photo_thumbnail_url: Optional[str]
+
+
+class RegistrationDetail(BaseModel):
+    meta: Optional[RegistrationMeta]
+    flights: list[Flight]
 
 
 # ── Helpers ────────────────────────────────────────────────────────────────────
@@ -290,3 +308,32 @@ def list_airports():
         ))
 
     return sorted(result, key=lambda x: x.total_visits, reverse=True)
+
+
+@app.get("/registrations/{reg}", response_model=RegistrationDetail, summary="Registration detail")
+def get_registration(reg: str):
+    with get_conn() as conn, conn.cursor() as cur:
+        cur.execute(
+            "SELECT * FROM flight_diary WHERE registration ILIKE %s ORDER BY date DESC",
+            (reg,),
+        )
+        rows = cur.fetchall()
+
+    flights = [row_to_flight(dict(r)) for r in rows]
+
+    raw = fetch_registration(reg)
+    meta = None
+    if raw:
+        meta = RegistrationMeta(
+            registration=raw.get("registration", reg.upper()),
+            manufacturer=raw.get("manufacturer"),
+            model=raw.get("type"),
+            icao_type=raw.get("icao_type"),
+            operator=raw.get("registered_owner"),
+            country=raw.get("registered_owner_country_name"),
+            mode_s=raw.get("mode_s"),
+            photo_url=raw.get("url_photo"),
+            photo_thumbnail_url=raw.get("url_photo_thumbnail"),
+        )
+
+    return RegistrationDetail(meta=meta, flights=flights)
