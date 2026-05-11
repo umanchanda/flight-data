@@ -119,7 +119,7 @@ if isinstance(sel_dates, (list, tuple)) and len(sel_dates) == 2:
 st.subheader(f"Flights ({len(filtered)})")
 st.dataframe(
     filtered.drop(columns=["duration"]),
-    use_container_width=True,
+    width="stretch",
     hide_index=True,
     column_config={
         "date": st.column_config.DateColumn("Date"),

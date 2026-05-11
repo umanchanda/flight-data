@@ -127,7 +127,7 @@ with col_dep:
             .sort_values("Flights", ascending=False)
         )
         dest["Destination"] = dest["to_airport"].apply(display_name)
-        st.dataframe(dest[["Destination", "Flights"]], hide_index=True, use_container_width=True)
+        st.dataframe(dest[["Destination", "Flights"]], hide_index=True, width="stretch")
     else:
         st.caption("No departures recorded.")
 
@@ -141,7 +141,7 @@ with col_arr:
             .sort_values("Flights", ascending=False)
         )
         orig["Origin"] = orig["from_airport"].apply(display_name)
-        st.dataframe(orig[["Origin", "Flights"]], hide_index=True, use_container_width=True)
+        st.dataframe(orig[["Origin", "Flights"]], hide_index=True, width="stretch")
     else:
         st.caption("No arrivals recorded.")
 
@@ -151,4 +151,4 @@ if not all_visits.empty:
         all_visits["airline"].value_counts().reset_index()
     )
     airline_counts.columns = ["Airline", "Flights"]
-    st.dataframe(airline_counts, hide_index=True, use_container_width=True)
+    st.dataframe(airline_counts, hide_index=True, width="stretch")
