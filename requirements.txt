@@ -1,6 +1,8 @@
 airportsdata
+fastapi
 pandas
 psycopg2-binary
 python-dotenv
 sqlalchemy
 streamlit
+uvicorn
