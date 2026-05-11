@@ -236,7 +236,7 @@ def list_aircraft():
             COALESCE(SUM(EXTRACT(EPOCH FROM duration) / 3600), 0)  AS total_hours,
             ARRAY_AGG(DISTINCT airline)                             AS airlines
         FROM flight_diary
-        WHERE aircraft IS NOT NULL
+        WHERE aircraft IS NOT NULL AND TRIM(aircraft) != '()'
         GROUP BY aircraft
         ORDER BY flights DESC
     """

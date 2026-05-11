@@ -85,8 +85,11 @@ def parse_duration(val):
     return None
 
 def clean(val):
-    """Return None for NaN/empty, otherwise the raw value."""
-    if pd.isna(val) or val == "":
+    """Return None for NaN/empty/unknown, otherwise the raw value."""
+    if pd.isna(val):
+        return None
+    stripped = str(val).strip()
+    if stripped == "" or stripped == "()":
         return None
     return val
 
