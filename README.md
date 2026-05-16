@@ -99,7 +99,3 @@ fr24/
 ├── csv/                    # Flight diary exports (gitignored)
 └── .env                    # Database credentials (gitignored)
 ```
-
-## Database
-
-Uses [Neon](https://neon.tech/) serverless PostgreSQL. The loader creates the `flight_diary` table automatically on first run and adds a unique constraint on `(date, from_airport, to_airport, dep_time)` to support upserts.
