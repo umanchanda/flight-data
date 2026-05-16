@@ -26,6 +26,23 @@ AIRCRAFT_SPECS = {
             "Its range makes it popular for thin routes and secondary city pairs."
         ),
     },
+    "Airbus A319-100 (A319)": {
+        "manufacturer": "Airbus",
+        "family": "A320 family",
+        "type": "Narrow-body",
+        "engines": "2× CFM56-5B or IAE V2500",
+        "range_km": 6850,
+        "capacity": "124–156",
+        "wingspan_m": 33.9,
+        "length_m": 33.8,
+        "max_speed_kmh": 903,
+        "first_flight": "1995",
+        "intro": (
+            "The A319-100 is the primary production variant of the A319 — the shortest member of "
+            "the A320 family. Its range advantage over larger siblings makes it a natural choice "
+            "for thinner routes and secondary city pairs."
+        ),
+    },
     "Airbus A320-100 (A320)": {
         "manufacturer": "Airbus",
         "family": "A320 family",
@@ -72,6 +89,22 @@ AIRCRAFT_SPECS = {
         "intro": (
             "The A321 is the stretched variant of the A320, offering the highest capacity in the "
             "family. It competes directly with the Boeing 757 on medium-haul routes."
+        ),
+    },
+    "Airbus A321-200 (A321)": {
+        "manufacturer": "Airbus",
+        "family": "A320 family",
+        "type": "Narrow-body",
+        "engines": "2× CFM56-5B or IAE V2533",
+        "range_km": 5950,
+        "capacity": "180–220",
+        "wingspan_m": 34.1,
+        "length_m": 44.5,
+        "max_speed_kmh": 903,
+        "first_flight": "1996",
+        "intro": (
+            "The A321-200 added auxiliary fuel tanks over the base -100, extending range by over "
+            "1,000 km. It became the dominant A321 variant and the direct precursor to the A321neo."
         ),
     },
     "Airbus A321neo (A21N)": {
@@ -186,6 +219,40 @@ AIRCRAFT_SPECS = {
             "Indonesian carriers. The -900ER added exit doors for higher capacity."
         ),
     },
+    "Boeing 737-900ER (B739)": {
+        "manufacturer": "Boeing",
+        "family": "737 Next Generation",
+        "type": "Narrow-body",
+        "engines": "2× CFM56-7B",
+        "range_km": 5925,
+        "capacity": "177–215",
+        "wingspan_m": 35.8,
+        "length_m": 42.1,
+        "max_speed_kmh": 842,
+        "first_flight": "2006",
+        "intro": (
+            "The 737-900ER (Extended Range) added two optional exit doors and extra fuel capacity, "
+            "making it the longest-range NG variant. It was the dominant type for United Airlines "
+            "and is still widely flown across US domestic networks."
+        ),
+    },
+    "Boeing 757-200 (B752)": {
+        "manufacturer": "Boeing",
+        "family": "757",
+        "type": "Narrow-body",
+        "engines": "2× RR RB211 or PW PW2000",
+        "range_km": 7600,
+        "capacity": "200–239",
+        "wingspan_m": 38.1,
+        "length_m": 47.3,
+        "max_speed_kmh": 935,
+        "first_flight": "1982",
+        "intro": (
+            "The 757-200 was the go-to narrow-body for transatlantic routes before the 737 MAX "
+            "and A321neo arrived. Prized for powerful climb performance and hot-and-high capability, "
+            "it remains in service with US majors and cargo carriers."
+        ),
+    },
     "Boeing 767-300 (B763)": {
         "manufacturer": "Boeing",
         "family": "767",
@@ -233,6 +300,23 @@ AIRCRAFT_SPECS = {
             "The 787-9 is the stretched Dreamliner, offering 20% better fuel efficiency than "
             "same-size predecessors. Its composite fuselage enables higher cabin humidity and pressure "
             "for improved passenger comfort on long-haul routes."
+        ),
+    },
+    "Bombardier CRJ-200 (CRJ2)": {
+        "manufacturer": "Bombardier",
+        "family": "CRJ series",
+        "type": "Regional jet",
+        "engines": "2× GE CF34-3B1",
+        "range_km": 3148,
+        "capacity": "50",
+        "wingspan_m": 21.2,
+        "length_m": 26.8,
+        "max_speed_kmh": 860,
+        "first_flight": "1991",
+        "intro": (
+            "The CRJ-200 seats 50 passengers and was the workhorse of US regional aviation "
+            "through the 2000s. Many are still operated under United Express and American Eagle "
+            "feeds, though they are gradually being retired."
         ),
     },
     "Embraer ERJ-170 (E170)": {
