@@ -13,12 +13,13 @@ st.title("🗺️ Airports")
 
 AIRPORTS = airportsdata.load("IATA")
 
+
 def extract_iata(code_str: str) -> str | None:
     m = re.search(r'\(([A-Z]{3})/', str(code_str))
     return m.group(1) if m else None
 
+
 def display_name(code_str: str) -> str:
-    # "Los Angeles / Los Angeles International (LAX/KLAX)" → "Los Angeles International (LAX)"
     iata = extract_iata(code_str)
     info = AIRPORTS.get(iata) if iata else None
     if info:
@@ -127,7 +128,7 @@ with col_dep:
             .sort_values("Flights", ascending=False)
         )
         dest["Destination"] = dest["to_airport"].apply(display_name)
-        st.dataframe(dest[["Destination", "Flights"]], hide_index=True, width="stretch")
+        st.dataframe(dest[["Destination", "Flights"]], hide_index=True, use_container_width=True)
     else:
         st.caption("No departures recorded.")
 
@@ -141,14 +142,12 @@ with col_arr:
             .sort_values("Flights", ascending=False)
         )
         orig["Origin"] = orig["from_airport"].apply(display_name)
-        st.dataframe(orig[["Origin", "Flights"]], hide_index=True, width="stretch")
+        st.dataframe(orig[["Origin", "Flights"]], hide_index=True, use_container_width=True)
     else:
         st.caption("No arrivals recorded.")
 
 st.subheader("Airlines used here")
 if not all_visits.empty:
-    airline_counts = (
-        all_visits["airline"].value_counts().reset_index()
-    )
+    airline_counts = all_visits["airline"].value_counts().reset_index()
     airline_counts.columns = ["Airline", "Flights"]
-    st.dataframe(airline_counts, hide_index=True, width="stretch")
+    st.dataframe(airline_counts, hide_index=True, use_container_width=True)

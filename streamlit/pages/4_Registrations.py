@@ -1,11 +1,11 @@
 import os
+import sys
 import pandas as pd
 import streamlit as st
 from dotenv import load_dotenv
 from sqlalchemy import create_engine
 
-import sys
-sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+sys.path.append(os.path.join(os.path.dirname(__file__), "../.."))
 from registration_lookup import fetch_registration
 
 load_dotenv()
@@ -71,7 +71,7 @@ with col_info:
 
 with col_photo:
     if meta and meta.get("url_photo"):
-        st.image(meta["url_photo"], caption="© airport-data.com", use_container_width=True)
+        st.image(meta["url_photo"], caption="© airport-data.com", use_column_width=True)
 
 st.divider()
 
@@ -89,7 +89,7 @@ st.subheader("Flight history on this aircraft")
 st.dataframe(
     flights.drop(columns=["registration"]),
     hide_index=True,
-    width="stretch",
+    use_container_width=True,
     column_config={
         "date": st.column_config.DateColumn("Date"),
         "flight_number": "Flight #",

@@ -420,11 +420,9 @@ st.divider()
 
 # ── Airlines flown with ────────────────────────────────────────────────────────
 st.subheader("Airlines flown with")
-airline_counts = (
-    flights_on_type["airline"].value_counts().reset_index()
-)
+airline_counts = flights_on_type["airline"].value_counts().reset_index()
 airline_counts.columns = ["Airline", "Flights"]
-st.dataframe(airline_counts, hide_index=True, width="stretch")
+st.dataframe(airline_counts, hide_index=True, use_container_width=True)
 
 # ── Routes ────────────────────────────────────────────────────────────────────
 st.subheader("Routes flown")
@@ -436,4 +434,4 @@ routes = (
     .sort_values("Flights", ascending=False)
 )
 routes["Route"] = routes["from_airport"] + " → " + routes["to_airport"]
-st.dataframe(routes[["Route", "Flights"]], hide_index=True, width="stretch")
+st.dataframe(routes[["Route", "Flights"]], hide_index=True, use_container_width=True)
