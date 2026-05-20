@@ -68,7 +68,6 @@ with col_info:
             "Manufacturer": meta.get("manufacturer", "—"),
             "Model": meta.get("type", "—"),
             "ICAO type": meta.get("icao_type", "—"),
-            "Year built": meta.get("year_built") or "—",
             "Country": meta.get("registered_owner_country_name", "—"),
             "Mode-S (hex)": meta.get("mode_s", "—"),
         }
