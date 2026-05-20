@@ -79,7 +79,7 @@ with col_info:
 with col_photo:
     if photo and photo.get("url"):
         caption = f"© {photo['photographer']} via Planespotters.net" if photo.get("photographer") else "© Planespotters.net"
-        st.image(photo["url"], caption=caption, use_container_width=True)
+        st.image(photo["url"], caption=caption, use_column_width=True)
         if photo.get("link"):
             st.markdown(f"[View on Planespotters.net]({photo['link']})")
 
