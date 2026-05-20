@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 from sqlalchemy import create_engine
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "../.."))
-from registration_lookup import fetch_registration
+from registration_lookup import fetch_registration, fetch_photo
 
 load_dotenv()
 
@@ -39,6 +39,11 @@ def lookup(reg: str):
     return fetch_registration(reg)
 
 
+@st.cache_data(ttl=3600)
+def lookup_photo(reg: str):
+    return fetch_photo(reg)
+
+
 df = load_flights()
 registrations = sorted(df["registration"].dropna().unique())
 
@@ -48,6 +53,7 @@ if not sel_reg:
 
 flights = df[df["registration"] == sel_reg].reset_index(drop=True)
 meta = lookup(sel_reg)
+photo = lookup_photo(sel_reg)
 
 st.divider()
 
@@ -70,8 +76,11 @@ with col_info:
         st.info("No external data found for this registration.")
 
 with col_photo:
-    if meta and meta.get("url_photo"):
-        st.image(meta["url_photo"], caption="© airport-data.com", use_column_width=True)
+    if photo and photo.get("url"):
+        caption = f"© {photo['photographer']} via Planespotters.net" if photo.get("photographer") else "© Planespotters.net"
+        st.image(photo["url"], caption=caption, use_container_width=True)
+        if photo.get("link"):
+            st.markdown(f"[View on Planespotters.net]({photo['link']})")
 
 st.divider()
 
