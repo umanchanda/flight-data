@@ -351,6 +351,74 @@ AIRCRAFT_SPECS = {
             "ever sits in a middle seat, making it a favourite for business travellers on short routes."
         ),
     },
+    "Airbus A340-300 (A343)": {
+        "manufacturer": "Airbus",
+        "family": "A340",
+        "type": "Wide-body",
+        "engines": "4× CFM56-5C",
+        "range_km": 13500,
+        "capacity": "295–335",
+        "wingspan_m": 60.3,
+        "length_m": 63.6,
+        "max_speed_kmh": 914,
+        "first_flight": "1991",
+        "intro": (
+            "The A340-300 was Airbus's first four-engine long-haul jet, offering extended-twin "
+            "operations (ETOPS) independence. Though superseded in efficiency by twin-engine jets, "
+            "it remains in service with several carriers on ultra-long routes."
+        ),
+    },
+    "Boeing 747-400 (B744)": {
+        "manufacturer": "Boeing",
+        "family": "747",
+        "type": "Wide-body",
+        "engines": "4× GE CF6, PW PW4000, or RR RB211",
+        "range_km": 13450,
+        "capacity": "416–524",
+        "wingspan_m": 64.4,
+        "length_m": 70.7,
+        "max_speed_kmh": 988,
+        "first_flight": "1988",
+        "intro": (
+            "The 747-400 is the iconic 'Queen of the Skies,' featuring winglets and a glass cockpit "
+            "that eliminated the flight engineer. It defined long-haul aviation for three decades and "
+            "remains the most produced 747 variant."
+        ),
+    },
+    "Boeing 777-200ER (B77E)": {
+        "manufacturer": "Boeing",
+        "family": "777",
+        "type": "Wide-body",
+        "engines": "2× GE90, PW4000, or RR Trent 800",
+        "range_km": 13080,
+        "capacity": "305–440",
+        "wingspan_m": 60.9,
+        "length_m": 63.7,
+        "max_speed_kmh": 905,
+        "first_flight": "1997",
+        "intro": (
+            "The 777-200ER (Extended Range) added fuel capacity over the base -200 to reach "
+            "destinations non-stop that previously required a technical stop. It became the "
+            "backbone of many intercontinental fleets through the 2000s and 2010s."
+        ),
+    },
+    "Ilyushin IL-96 (IL96)": {
+        "manufacturer": "Ilyushin",
+        "family": "IL-96",
+        "type": "Wide-body",
+        "engines": "4× Aviadvigatel PS-90A",
+        "range_km": 9000,
+        "capacity": "262–300",
+        "wingspan_m": 60.1,
+        "length_m": 55.3,
+        "max_speed_kmh": 900,
+        "first_flight": "1988",
+        "intro": (
+            "The IL-96 is Russia's primary wide-body airliner, derived from the earlier IL-86. "
+            "Its four Aviadvigatel PS-90A turbofans and supercritical wing give it range comparable "
+            "to Western wide-bodies. It is still operated by Cubana and as a Russian government VIP transport."
+        ),
+    },
 }
 
 
