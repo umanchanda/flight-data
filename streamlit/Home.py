@@ -185,3 +185,30 @@ with col4:
         .reset_index()
     )
     st.bar_chart(hours_by_airline.set_index("airline"))
+
+st.divider()
+
+# ── Repeat Aircraft ────────────────────────────────────────────────────────────
+repeat_regs = (
+    filtered[filtered["registration"].notna()]
+    .groupby("registration")
+    .size()
+    .reset_index(name="flights")
+    .query("flights > 1")
+    .sort_values("flights", ascending=False)
+)
+
+if not repeat_regs.empty:
+    st.subheader("🔁 Repeat Aircraft")
+    st.caption("Registrations you've flown on more than once")
+
+    st.bar_chart(repeat_regs.set_index("registration"))
+
+    with st.expander("View flight details for repeat aircraft"):
+        for _, row in repeat_regs.iterrows():
+            reg = row["registration"]
+            reg_flights = filtered[filtered["registration"] == reg][
+                ["date", "flight_number", "from_airport", "to_airport", "airline", "aircraft"]
+            ].sort_values("date")
+            st.markdown(f"**{reg}** — {row['flights']} flights")
+            st.dataframe(reg_flights, use_container_width=True, hide_index=True)

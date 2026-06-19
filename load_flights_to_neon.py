@@ -20,7 +20,7 @@ from psycopg2.extras import execute_values
 
 # ─── CONFIG ───────────────────────────────────────────────────────────────────
 
-CSV_PATH = "csv/flightdiary_2026_06_18_22_23.csv"  # path to your CSV file
+CSV_PATH = "csv/flightdiary_2026_06_19_06_04.csv"  # path to your CSV file
 
 # Paste your Neon connection string here, or set the env var NEON_DATABASE_URL.
 # Format: postgresql://user:password@host/dbname?sslmode=require
