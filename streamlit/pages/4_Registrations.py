@@ -76,11 +76,28 @@ with col_info:
         st.info("No external data found for this registration.")
 
 with col_photo:
-    if photo and photo.get("url"):
-        caption = f"© {photo['photographer']} via Planespotters.net" if photo.get("photographer") else "© Planespotters.net"
-        st.image(photo["url"], caption=caption, use_column_width=True)
-        if photo.get("link"):
-            st.markdown(f"[View on Planespotters.net]({photo['link']})")
+    # Normalize and validate the photo URL returned by `fetch_photo`.
+    photo_url = None
+    if photo:
+        url = photo.get("url")
+        # Accept plain string URLs
+        if isinstance(url, str) and url.strip():
+            # Planespotters sometimes returns protocol-relative URLs like "//..."
+            photo_url = "https:" + url if url.startswith("//") else url
+        # Some API shapes may nest the src inside a dict
+        elif isinstance(url, dict):
+            src = url.get("src") or url.get("url")
+            if isinstance(src, str) and src.strip():
+                photo_url = "https:" + src if src.startswith("//") else src
+
+    if photo_url:
+        caption = f"© {photo.get('photographer')} via Planespotters.net" if photo.get("photographer") else "© Planespotters.net"
+        try:
+            st.image(photo_url, caption=caption, use_column_width=True)
+            if photo.get("link"):
+                st.markdown(f"[View on Planespotters.net]({photo['link']})")
+        except Exception:
+            st.warning("Unable to load photo for this registration.")
 
 st.divider()
 
