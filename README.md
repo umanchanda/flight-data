@@ -28,7 +28,7 @@ cd fr24
 
 ### 2. Install dependencies
 ```bash
-pip install streamlit pandas psycopg2-binary sqlalchemy python-dotenv airportsdata
+uv sync
 ```
 
 ### 3. Configure environment
@@ -40,19 +40,19 @@ NEON_DATABASE_URL=postgresql://user:password@host/dbname?sslmode=require
 ### 4. Load your flight data
 Export your flight diary CSV from Flightradar24, place it in the `csv/` folder, update `CSV_PATH` in `load_flights_to_neon.py`, then run:
 ```bash
-python3 load_flights_to_neon.py
+uv run load_flights_to_neon.py
 ```
 
 Re-running with a newer export will upsert — new flights are inserted, existing ones are updated.
 
 ### 5. Run the Streamlit app
 ```bash
-streamlit run streamlit/Home.py
+uv run streamlit run streamlit/Home.py
 ```
 
 ### 6. Run the API locally
 ```bash
-uvicorn api.main:app --reload
+uv run uvicorn api.main:app --reload
 ```
 
 Interactive docs available at `http://localhost:8000/docs`.
@@ -78,8 +78,8 @@ Example: `GET https://flight-data-26kb.onrender.com/flights?airline=United&fligh
 2. Go to [render.com](https://render.com) → New → Web Service → connect your repo
 3. Set the following:
    - **Runtime:** Python
-   - **Build command:** `pip install -r requirements.txt`
-   - **Start command:** `uvicorn api.main:app --host 0.0.0.0 --port $PORT`
+   - **Build command:** `pip install uv && uv sync --frozen`
+   - **Start command:** `uv run uvicorn api.main:app --host 0.0.0.0 --port $PORT`
 4. Under **Environment**, add `NEON_DATABASE_URL` with your connection string
 
 ## Project structure
@@ -104,7 +104,8 @@ fr24/
 ├── registration_lookup.py  # Shared aircraft registration lookup
 ├── load_flights_to_neon.py # CSV → Neon PostgreSQL loader
 ├── Procfile                # API start command for Render / Railway
-├── requirements.txt
+├── pyproject.toml          # Project metadata & dependencies (uv)
+├── uv.lock                 # Locked dependency versions (uv)
 ├── csv/                    # Flight diary exports (gitignored)
 └── .env                    # Database credentials (gitignored)
 ```

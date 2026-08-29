@@ -1,9 +1,0 @@
-airportsdata
-fastapi
-httpx
-pandas
-psycopg2-binary
-python-dotenv
-sqlalchemy
-streamlit>=1.34.0
-uvicorn
