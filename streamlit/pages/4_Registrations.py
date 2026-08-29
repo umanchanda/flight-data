@@ -93,7 +93,7 @@ with col_photo:
     if photo_url:
         caption = f"© {photo.get('photographer')} via Planespotters.net" if photo.get("photographer") else "© Planespotters.net"
         try:
-            st.image(photo_url, caption=caption, use_column_width=True)
+            st.image(photo_url, caption=caption, use_container_width=True)
             if photo.get("link"):
                 st.markdown(f"[View on Planespotters.net]({photo['link']})")
         except Exception:
