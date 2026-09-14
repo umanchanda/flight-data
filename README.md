@@ -1,111 +1,160 @@
-# fr24 Flight Diary
+# Flight Data
 
-A Streamlit dashboard for visualizing personal flight history exported from [Flightradar24](https://www.flightradar24.com/). Link is available [here](https://flight-data-uman230.streamlit.app/)
+A React + FastAPI app for visualizing personal flight history exported from [Flightradar24](https://www.flightradar24.com/).
+
+## Architecture
+
+- **Frontend:** React app in `/home/runner/work/flight-data/flight-data/frontend`
+- **Backend:** FastAPI app in `/home/runner/work/flight-data/flight-data/api`
+- **Database:** Neon PostgreSQL
+- **Deployment:** Render static site for the frontend and a Render web service for the API
+
+The backend is the only layer that talks to Neon. The frontend reads all flight, aircraft, airport, and registration data through the API.
 
 ## Features
 
-### Flights page
-- Summary metrics: total flights, hours flown, airlines, and airports visited
-- Filterable flight table by airline, route, class, aircraft type, seat type, flight reason, ticket type, and date range
-- Charts: flights by airline, flights per year, top routes, hours by airline
+### Flights
+- Summary metrics for flights, hours, airlines, and airports visited
+- Multi-filter dashboard for years, airlines, airports, class, aircraft, seat type, reason, ticket type, and date range
+- Charts for flights by airline, flights per year, top routes, and hours by airline
+- Repeat-aircraft view for registrations flown more than once
 
-### Aircraft page
-- Specs for every aircraft type you've flown (range, capacity, engines, wingspan, etc.)
-- Personal stats per type: flights, hours, airlines, and routes
+### Aircraft
+- Stats for each aircraft type you have flown
+- Static aircraft specifications and intro text
+- Airline and route breakdowns per aircraft type
 
-### Airports page
-- World map of every airport you've visited
-- Per-airport detail: name, city, country, IATA/ICAO codes, elevation, timezone
-- Departures, arrivals, and airlines at each airport
+### Airports
+- Interactive world map of visited airports
+- Airport detail cards with metadata and visit stats
+- Route and airline breakdowns for each airport
 
-## Setup
+### Registrations
+- Per-registration flight history
+- External aircraft metadata via ADSBDB
+- Aircraft photos via Planespotters when available
 
-### 1. Clone the repo
+## Local development
+
+### 1. Install backend dependencies
 ```bash
-git clone https://github.com/your-username/fr24.git
-cd fr24
+cd /home/runner/work/flight-data/flight-data
+python -m pip install -r requirements.txt
 ```
 
-### 2. Install dependencies
+### 2. Install frontend dependencies
 ```bash
-uv sync
+cd /home/runner/work/flight-data/flight-data/frontend
+npm install
 ```
 
-### 3. Configure environment
-Create a `.env` file in the project root:
+### 3. Configure environment variables
+Create `/home/runner/work/flight-data/flight-data/.env`:
+```env
+NEON_DATABASE_URL=postgresql://...
+FRONTEND_ORIGIN=http://localhost:5173
 ```
-NEON_DATABASE_URL=postgresql://user:password@host/dbname?sslmode=require
+
+Create `/home/runner/work/flight-data/flight-data/frontend/.env`:
+```env
+VITE_API_BASE_URL=http://localhost:8000
 ```
 
 ### 4. Load your flight data
-Export your flight diary CSV from Flightradar24, place it in the `csv/` folder, update `CSV_PATH` in `load_flights_to_neon.py`, then run:
+Export your flight diary CSV from Flightradar24, place it in the `csv/` folder, update `CSV_PATH` in `/home/runner/work/flight-data/flight-data/load_flights_to_neon.py`, then run:
 ```bash
-uv run load_flights_to_neon.py
+cd /home/runner/work/flight-data/flight-data
+python load_flights_to_neon.py
 ```
 
-Re-running with a newer export will upsert — new flights are inserted, existing ones are updated.
-
-### 5. Run the Streamlit app
+### 5. Run the API
 ```bash
-uv run streamlit run streamlit/Home.py
+cd /home/runner/work/flight-data/flight-data
+uvicorn api.main:app --reload
 ```
 
-### 6. Run the API locally
+Interactive docs are available at `http://localhost:8000/docs`.
+
+### 6. Run the frontend
 ```bash
-uv run uvicorn api.main:app --reload
+cd /home/runner/work/flight-data/flight-data/frontend
+npm run dev
 ```
 
-Interactive docs available at `http://localhost:8000/docs`.
+The React app runs at `http://localhost:5173`.
 
 ## API endpoints
 
 | Method | Path | Description |
 |--------|------|-------------|
-| `GET` | `/flights` | All flights — filterable by airline, aircraft, route, class, reason, ticket type, date range |
+| `GET` | `/dashboard` | Dashboard data including summary metrics, filters, charts, flights, and repeat aircraft |
+| `GET` | `/stats` | Global flight summary metrics |
+| `GET` | `/flights` | Filtered flight list |
 | `GET` | `/flights/{id}` | Single flight by ID |
-| `GET` | `/stats` | Total flights, hours, airlines, airports |
-| `GET` | `/aircraft` | All aircraft types with flight counts and hours |
-| `GET` | `/airports` | All airports with departure/arrival counts |
+| `GET` | `/aircraft` | All aircraft types with counts and hours |
+| `GET` | `/aircraft/{name}` | Aircraft detail, specs, and route/airline stats |
+| `GET` | `/airports` | All visited airports with map coordinates and visit counts |
+| `GET` | `/airports/{code}` | Airport detail, visit stats, and route/airline breakdowns |
+| `GET` | `/registrations` | All flown registrations |
+| `GET` | `/registrations/{reg}` | Registration metadata, photo, stats, and flight history |
 
-The API is deployed at **https://flight-data-26kb.onrender.com**. Interactive docs at [https://flight-data-26kb.onrender.com/docs](https://flight-data-26kb.onrender.com/docs).
+## Deploying to Render
 
-Example: `GET https://flight-data-26kb.onrender.com/flights?airline=United&flight_class=business&date_from=2024-01-01`
+This repo includes `/home/runner/work/flight-data/flight-data/render.yaml` for a two-service Render deployment.
 
-## Deploying the API
+### Backend service
+- **Type:** Web Service
+- **Root directory:** repo root
+- **Build command:** `pip install uv && uv sync --frozen`
+- **Start command:** `uv run uvicorn api.main:app --host 0.0.0.0 --port $PORT`
+- **Environment variables:**
+  - `NEON_DATABASE_URL`
+  - `FRONTEND_ORIGIN=https://<your-frontend>.onrender.com`
 
-### Render (free tier)
-1. Push this repo to GitHub
-2. Go to [render.com](https://render.com) → New → Web Service → connect your repo
-3. Set the following:
-   - **Runtime:** Python
-   - **Build command:** `pip install uv && uv sync --frozen`
-   - **Start command:** `uv run uvicorn api.main:app --host 0.0.0.0 --port $PORT`
-4. Under **Environment**, add `NEON_DATABASE_URL` with your connection string
+### Frontend service
+- **Type:** Static Site
+- **Root directory:** `frontend`
+- **Build command:** `npm ci && npm run build`
+- **Publish directory:** `dist`
+- **Environment variables:**
+  - `VITE_API_BASE_URL=https://<your-api>.onrender.com`
+
+After the frontend is deployed, update `FRONTEND_ORIGIN` on the API service to the final Render URL for the frontend.
 
 ## Project structure
-```
-fr24/
+
+```text
+flight-data/
 ├── api/
-│   ├── main.py             # FastAPI app + middleware
-│   ├── db.py               # DB connection, constants, helpers
-│   ├── models.py           # Pydantic models
+│   ├── aircraft_specs.py
+│   ├── db.py
+│   ├── main.py
+│   ├── models.py
 │   └── routes/
-│       ├── flights.py      # GET /flights, GET /flights/{id}
-│       ├── stats.py        # GET /stats
-│       ├── aircraft.py     # GET /aircraft
-│       ├── airports.py     # GET /airports
-│       └── registrations.py# GET /registrations/{reg}
-├── streamlit/
-│   ├── Home.py             # Flights page (main entry point)
-│   └── pages/
-│       ├── 2_Aircraft.py   # Aircraft info & stats
-│       ├── 3_Airports.py   # Airport map & stats
-│       └── 4_Registrations.py # Registration lookup
-├── registration_lookup.py  # Shared aircraft registration lookup
-├── load_flights_to_neon.py # CSV → Neon PostgreSQL loader
-├── Procfile                # API start command for Render / Railway
-├── pyproject.toml          # Project metadata & dependencies (uv)
-├── uv.lock                 # Locked dependency versions (uv)
-├── csv/                    # Flight diary exports (gitignored)
-└── .env                    # Database credentials (gitignored)
+│       ├── aircraft.py
+│       ├── airports.py
+│       ├── dashboard.py
+│       ├── flights.py
+│       ├── registrations.py
+│       └── stats.py
+├── frontend/
+│   ├── public/
+│   │   └── _redirects
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── api.js
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   ├── main.jsx
+│   │   └── utils.js
+│   ├── .env.example
+│   ├── package.json
+│   └── vite.config.js
+├── load_flights_to_neon.py
+├── Procfile
+├── pyproject.toml
+├── render.yaml
+├── requirements.txt
+└── uv.lock
 ```
