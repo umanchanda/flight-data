@@ -1,46 +1,13 @@
-import os
 import pandas as pd
 import streamlit as st
-from dotenv import load_dotenv
-from sqlalchemy import create_engine
 
-load_dotenv()
-
-SEAT_TYPE = {1: "Window", 2: "Middle", 3: "Aisle"}
-FLIGHT_CLASS = {1: "Economy", 3: "Premium Economy", 2: "Business", 4: "First"}
-FLIGHT_REASON = {1: "Personal", 2: "Business", 3: "Crew"}
+from api_client import load_flights
 
 st.set_page_config(page_title="Flight Diary", page_icon="✈️", layout="wide")
 st.title("✈️ Flight Diary")
 
 
-@st.cache_data(ttl=60)
-def load_data() -> pd.DataFrame:
-    engine = create_engine(os.environ["NEON_DATABASE_URL"])
-    df = pd.read_sql(
-        """
-        SELECT
-            date, flight_number, from_airport, to_airport,
-            dep_time, arr_time, duration,
-            airline, aircraft, registration,
-            seat_number, seat_type, flight_class, flight_reason, note
-        FROM flight_diary
-        ORDER BY date DESC, dep_time DESC
-        """,
-        engine,
-    )
-    df["date"] = pd.to_datetime(df["date"])
-    df["aircraft"] = df["aircraft"].str.strip().replace("()", None)
-    df["seat_type"] = df["seat_type"].map(SEAT_TYPE)
-    df["flight_class"] = df["flight_class"].map(FLIGHT_CLASS)
-    df["flight_reason"] = df["flight_reason"].map(FLIGHT_REASON)
-    df["duration_hrs"] = df["duration"].apply(
-        lambda x: round(x.total_seconds() / 3600, 2) if x is not None else None
-    )
-    return df
-
-
-df = load_data()
+df = load_flights()
 
 # ── Summary metrics ────────────────────────────────────────────────────────────
 total_flights = len(df)
@@ -123,7 +90,7 @@ if isinstance(sel_dates, (list, tuple)) and len(sel_dates) == 2:
 # ── Flight table ───────────────────────────────────────────────────────────────
 st.subheader(f"Flights ({len(filtered)})")
 st.dataframe(
-    filtered.drop(columns=["duration"]),
+    filtered,
     use_container_width=True,
     hide_index=True,
     column_config={

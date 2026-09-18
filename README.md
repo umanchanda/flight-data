@@ -35,6 +35,7 @@ uv sync
 Create a `.env` file in the project root:
 ```
 NEON_DATABASE_URL=postgresql://user:password@host/dbname?sslmode=require
+FLIGHT_API_URL=http://localhost:8000
 ```
 
 ### 4. Load your flight data
@@ -49,6 +50,10 @@ Re-running with a newer export will upsert — new flights are inserted, existin
 ```bash
 uv run streamlit run streamlit/Home.py
 ```
+
+The Streamlit app reads flight data through the API. In production, set
+`FLIGHT_API_URL` to the deployed API URL and keep `NEON_DATABASE_URL` configured
+only on the API service.
 
 ### 6. Run the API locally
 ```bash

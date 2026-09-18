@@ -1,12 +1,12 @@
 import os
 import re
+import sys
 import pandas as pd
 import streamlit as st
 import airportsdata
-from dotenv import load_dotenv
-from sqlalchemy import create_engine
 
-load_dotenv()
+sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+from api_client import load_flights
 
 st.set_page_config(page_title="Airports", page_icon="🗺️", layout="wide")
 st.title("🗺️ Airports")
@@ -29,12 +29,7 @@ def display_name(code_str: str) -> str:
 
 @st.cache_data(ttl=60)
 def load_data() -> pd.DataFrame:
-    engine = create_engine(os.environ["NEON_DATABASE_URL"])
-    df = pd.read_sql(
-        "SELECT date, from_airport, to_airport, airline, aircraft FROM flight_diary",
-        engine,
-    )
-    df["date"] = pd.to_datetime(df["date"])
+    df = load_flights()
     df["from_iata"] = df["from_airport"].map(extract_iata)
     df["to_iata"] = df["to_airport"].map(extract_iata)
     return df

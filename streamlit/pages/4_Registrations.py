@@ -2,41 +2,19 @@ import os
 import sys
 import pandas as pd
 import streamlit as st
-from dotenv import load_dotenv
-from sqlalchemy import create_engine
 
+sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.append(os.path.join(os.path.dirname(__file__), "../.."))
-from registration_lookup import fetch_registration, fetch_photo
-
-load_dotenv()
+from api_client import load_flights, load_registration
+from registration_lookup import fetch_photo
 
 st.set_page_config(page_title="Registrations", page_icon="🔍", layout="wide")
 st.title("🔍 Registrations")
 
 
-@st.cache_data(ttl=60)
-def load_flights() -> pd.DataFrame:
-    engine = create_engine(os.environ["NEON_DATABASE_URL"])
-    df = pd.read_sql(
-        """
-        SELECT date, flight_number, from_airport, to_airport,
-               airline, aircraft, registration, duration
-        FROM flight_diary
-        WHERE registration IS NOT NULL
-        ORDER BY date DESC
-        """,
-        engine,
-    )
-    df["date"] = pd.to_datetime(df["date"])
-    df["duration_hrs"] = df["duration"].apply(
-        lambda x: round(x.total_seconds() / 3600, 2) if x is not None else None
-    )
-    return df.drop(columns=["duration"])
-
-
 @st.cache_data(ttl=3600)
 def lookup(reg: str):
-    return fetch_registration(reg)
+    return load_registration(reg).get("meta")
 
 
 @st.cache_data(ttl=3600)
@@ -64,11 +42,11 @@ with col_info:
     st.subheader(sel_reg)
     if meta:
         rows = {
-            "Operator": meta.get("registered_owner", "—"),
+            "Operator": meta.get("operator", "—"),
             "Manufacturer": meta.get("manufacturer", "—"),
-            "Model": meta.get("type", "—"),
+            "Model": meta.get("model", "—"),
             "ICAO type": meta.get("icao_type", "—"),
-            "Country": meta.get("registered_owner_country_name", "—"),
+            "Country": meta.get("country", "—"),
             "Mode-S (hex)": meta.get("mode_s", "—"),
         }
         st.table(pd.DataFrame(rows.items(), columns=["", "Value"]).set_index(""))

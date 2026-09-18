@@ -1,10 +1,10 @@
 import os
+import sys
 import pandas as pd
 import streamlit as st
-from dotenv import load_dotenv
-from sqlalchemy import create_engine
 
-load_dotenv()
+sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+from api_client import load_flights
 
 st.set_page_config(page_title="Aircraft", page_icon="🛩️", layout="wide")
 st.title("🛩️ Aircraft")
@@ -422,21 +422,7 @@ AIRCRAFT_SPECS = {
 }
 
 
-@st.cache_data(ttl=60)
-def load_data() -> pd.DataFrame:
-    engine = create_engine(os.environ["NEON_DATABASE_URL"])
-    df = pd.read_sql(
-        "SELECT date, from_airport, to_airport, airline, aircraft, duration FROM flight_diary",
-        engine,
-    )
-    df["duration_hrs"] = df["duration"].apply(
-        lambda x: round(x.total_seconds() / 3600, 2) if x is not None else None
-    )
-    df["aircraft"] = df["aircraft"].str.strip().replace("()", None)
-    return df
-
-
-df = load_data()
+df = load_flights()
 known = sorted(df["aircraft"].dropna().unique())
 
 sel = st.selectbox("Select an aircraft", known)
