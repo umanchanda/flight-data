@@ -1,5 +1,6 @@
 from fastapi import APIRouter
 
+from ..aircraft_specs import AIRCRAFT_SPECS
 from ..db import get_conn
 from ..models import AircraftSummary
 
@@ -28,6 +29,7 @@ def list_aircraft():
             flights=r["flights"],
             total_hours=round(float(r["total_hours"]), 1),
             airlines=sorted(r["airlines"]),
+            specifications=AIRCRAFT_SPECS.get(r["aircraft"], {}),
         )
         for r in rows
     ]

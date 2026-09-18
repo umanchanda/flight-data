@@ -55,6 +55,11 @@ The Streamlit app reads flight data through the API. In production, set
 `FLIGHT_API_URL` to the deployed API URL and keep `NEON_DATABASE_URL` configured
 only on the API service.
 
+For Streamlit Cloud, add this under the app's **Settings → Secrets**:
+```toml
+FLIGHT_API_URL = "https://flight-data-26kb.onrender.com"
+```
+
 ### 6. Run the API locally
 ```bash
 uv run uvicorn api.main:app --reload

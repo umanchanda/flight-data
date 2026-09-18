@@ -35,6 +35,7 @@ class AircraftSummary(BaseModel):
     flights: int
     total_hours: float
     airlines: list[str]
+    specifications: dict = {}
 
 
 class AirportSummary(BaseModel):
