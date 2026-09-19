@@ -1,0 +1,283 @@
+
+Date,"Flight number",From,To,"Dep time","Arr time",Duration,Airline,Aircraft,Registration,"Seat number","Seat type","Flight class","Flight reason",Note,Dep_id,Arr_id,Airline_id,Aircraft_id
+2025-06-20,WN3835,"Philadelphia / Philadelphia (PHL/KPHL)","Chicago / Chicago Midway (MDW/KMDW)",20:15:00,21:25:00,02:10:00,"Southwest Airlines (WN/SWA)","Boeing 737-800 (B738)",N8559Q,,0,1,1,Nonrev,2311,1785,736,231
+2025-06-20,WN3878,"Chicago / Chicago Midway (MDW/KMDW)","Philadelphia / Philadelphia (PHL/KPHL)",09:50:00,12:50:00,02:00:00,"Southwest Airlines (WN/SWA)"," ()",,,2,1,1,Revenue,1785,2311,736,0
+2025-06-15,WN1073,"Chicago / Chicago Midway (MDW/KMDW)","Cincinnati / Northern Kentucky Int (CVG/KCVG)",09:05:00,11:15:00,01:10:00,"Southwest Airlines (WN/SWA)","Boeing 737 MAX 8 (B38M)",N8805L,,0,1,1,Nonrev,1785,646,736,2123
+2025-06-15,WN1138,"Cincinnati / Northern Kentucky Int (CVG/KCVG)","Chicago / Chicago Midway (MDW/KMDW)",16:10:00,16:20:00,01:10:00,"Southwest Airlines (WN/SWA)","Boeing 737 MAX 8 (B38M)",N8852Q,,0,1,1,Nonrev,646,1785,736,2123
+2025-05-22,UA2362,"Chicago / O'Hare (ORD/KORD)","Newark / Liberty International (EWR/KEWR)",19:35:00,22:59:00,02:24:00,"United Airlines (UA/UAL)","Boeing 737-900ER (B739)",N38459,34E,2,1,1,Revenue,2205,851,808,2069
+2025-05-26,,"New York / La Guardia (LGA/KLGA)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,01:49:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Revenue,1605,1785,736,0
+2025-04-21,UA959,"London / Heathrow (LHR/EGLL)","Chicago / O'Hare (ORD/KORD)",11:05:00,14:10:00,09:05:00,"United Airlines (UA/UAL)","Boeing 767-300 (B763)",N662UA,,0,1,1,Revenue,1618,2205,808,244
+2025-04-17,BA8456,"Amsterdam / Schiphol (AMS/EHAM)","London / London City (LCY/EGLC)",18:15:00,18:25:00,01:10:00,"British Airways (BA/BAW)","Embraer ERJ-190 (E190)",G-LCAF,,0,1,1,Nonrev,122,1581,113,655
+2025-04-12,BA438,"London / Heathrow (LHR/EGLL)","Amsterdam / Schiphol (AMS/EHAM)",12:50:00,15:10:00,01:20:00,"British Airways (BA/BAW)","Airbus A320-200 (A320)",G-EUUE,,0,1,1,Nonrev,1618,122,113,2059
+2025-04-11,UA14,"Newark / Liberty International (EWR/KEWR)","London / Heathrow (LHR/EGLL)",18:45:00,07:15:00,07:30:00,"United Airlines (UA/UAL)","Boeing 767-300 (B763)",N685UA,,0,1,1,Revenue,851,1618,808,244
+2025-04-08,UA2362,"Chicago / O'Hare (ORD/KORD)","Newark / Liberty International (EWR/KEWR)",19:35:00,22:59:00,02:24:00,"United Airlines (UA/UAL)","Boeing 737-900ER (B739)",N66814,,0,1,1,Nonrev,2205,851,808,2069
+2025-05-12,WN3802,"Chicago / Chicago Midway (MDW/KMDW)","Dallas / Dallas Love Fld (DAL/KDAL)",19:43:00,21:40:00,01:58:00,"Southwest Airlines (WN/SWA)","Boeing 737-800 (B738)",N8544Z,,0,1,2,Revenue,1785,672,736,231
+2025-05-15,WN2406,"Dallas / Dallas Love Fld (DAL/KDAL)","Chicago / Chicago Midway (MDW/KMDW)",19:00:00,20:56:00,01:58:00,"Southwest Airlines (WN/SWA)","Boeing 737-700 (B737)",N473WN,,0,1,2,Revenue,672,1785,736,230
+2025-01-27,WN1888,"Chicago / Chicago Midway (MDW/KMDW)","Dallas / Dallas Love Fld (DAL/KDAL)",16:00:00,18:30:00,02:30:00,"Southwest Airlines (WN/SWA)","Boeing 737-700 (B737)",N7725A,,0,1,2,Revenue,1785,672,736,230
+2025-01-01,WN4710,"Baltimore / Washington (BWI/KBWI)","Chicago / Chicago Midway (MDW/KMDW)",20:41:00,21:35:00,01:54:00,"Southwest Airlines (WN/SWA)","Boeing 737-800 (B738)",N8670A,,0,1,1,Nonrev,449,1785,736,231
+2025-01-01,WN907,"Montego Bay / Montego Bay (MBJ/MKJS)","Baltimore / Washington (BWI/KBWI)",13:51:00,17:15:00,02:24:00,"Southwest Airlines (WN/SWA)","Boeing 737-800 (B738)",N8311Q,,0,1,1,Revenue,1756,449,736,231
+2024-12-25,WN272,"Orlando / Orlando (MCO/KMCO)","Montego Bay / Montego Bay (MBJ/MKJS)",10:43:00,12:40:00,02:57:00,"Southwest Airlines (WN/SWA)","Boeing 737 MAX 8 (B38M)",N8817L,,0,1,1,Revenue,1768,1756,736,2123
+2024-12-25,WN1601,"Chicago / Chicago Midway (MDW/KMDW)","Orlando / Orlando (MCO/KMCO)",06:00:00,09:30:00,02:30:00,"Southwest Airlines (WN/SWA)","Boeing 737-800 (B738)",N8661A,,0,1,1,Revenue,1785,1768,736,231
+2024-12-02,,"New York / La Guardia (LGA/KLGA)","Dallas / Dallas Love Fld (DAL/KDAL)",00:00:00,00:00:00,03:14:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,2,Revenue,1605,672,736,0
+2024-12-02,,"Dallas / Dallas Love Fld (DAL/KDAL)","Las Vegas / McCarran (LAS/KLAS)",00:00:00,00:00:00,02:33:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,2,Revenue,672,1557,736,0
+2024-12-05,,"Las Vegas / McCarran (LAS/KLAS)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,03:32:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,2,Revenue,1557,1785,736,0
+2024-11-18,AI116,"New York / John F Kennedy (JFK/KJFK)","Mumbai / Chhatrapati Shivaji (BOM/VABB)",11:10:00,11:50:00,15:40:00,"Air India (AI/AIC)","Boeing 777-300ER (B77W)",VT-ALN,,2,1,1,Nonrev,1328,375,43,2023
+2024-11-16,UA2362,"Chicago / O'Hare (ORD/KORD)","Newark / Liberty International (EWR/KEWR)",19:47:00,23:11:00,02:24:00,"United Airlines (UA/UAL)","Boeing 737 MAX 9 (B39M)",N37556,,0,1,1,Nonrev,2205,851,808,2124
+2024-10-30,UA1791,"Chicago / O'Hare (ORD/KORD)","Newark / Liberty International (EWR/KEWR)",21:28:00,00:15:00,01:48:00,"United Airlines (UA/UAL)","Boeing 737-900ER (B739)",N34460,,0,1,1,Nonrev,2205,851,808,2069
+2024-11-01,WN1767,"New York / La Guardia (LGA/KLGA)","Chicago / Chicago Midway (MDW/KMDW)",22:05:00,23:18:00,01:49:00,"Southwest Airlines (WN/SWA)","Boeing 737 MAX 8 (B38M)",N8817L,,0,1,1,Nonrev,1605,1785,736,2123
+2024-11-27,AI852,"Pune / Lohegaon (PNQ/VAPO)","Delhi / Indira Gandhi (DEL/VIDP)",07:40:00,09:47:00,02:07:00,"Air India (AI/AIC)","Airbus A321neo (A21N)",VT-RTE,,2,1,1,Revenue,2367,689,43,2128
+2024-08-07,,"Baltimore / Washington (BWI/KBWI)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,01:34:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Revenue,449,1785,736,0
+2024-08-05,,"Chicago / Chicago Midway (MDW/KMDW)","Baltimore / Washington (BWI/KBWI)",00:00:00,00:00:00,01:34:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Revenue,1785,449,736,0
+2024-08-28,,"New York / La Guardia (LGA/KLGA)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,01:49:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Nonrev,1605,1785,736,0
+2024-08-25,,"Chicago / Chicago Midway (MDW/KMDW)","Philadelphia / Philadelphia (PHL/KPHL)",00:00:00,00:00:00,01:41:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Nonrev,1785,2311,736,0
+2024-08-17,UA5500,"Chicago / O'Hare (ORD/KORD)","Cedar Rapids / Eastern Iowa (CID/KCID)",09:26:00,10:45:00,00:40:00,"United Airlines (UA/UAL)","Bombardier CRJ-200 (CRJ2)",N455SW,,3,1,1,Revenue,2205,3900,808,529
+2024-08-17,UA5865,"Cedar Rapids / Eastern Iowa (CID/KCID)","Chicago / O'Hare (ORD/KORD)",15:13:00,16:56:00,00:40:00,"United Airlines (UA/UAL)","Bombardier CRJ-200 (CRJ2)",N963SW,,1,1,1,Revenue,3900,2205,808,529
+2024-06-04,UA1484,"Chicago / O'Hare (ORD/KORD)","Newark / Liberty International (EWR/KEWR)",20:37:00,00:10:00,01:48:00,"United Airlines (UA/UAL)","Boeing 737-900ER (B739)",N36444,,0,1,1,Revenue,2205,851,808,2069
+2023-11-27,UA83,"Delhi / Indira Gandhi (DEL/VIDP)","Newark / Liberty International (EWR/KEWR)",23:35:00,06:25:00,15:50:00,"United Airlines (UA/UAL)","Boeing 787-9 (B789)",N24974,,3,1,1,Revenue,689,851,808,2088
+2023-11-17,UA82,"Newark / Liberty International (EWR/KEWR)","Delhi / Indira Gandhi (DEL/VIDP)",21:10:00,21:30:00,15:20:00,"United Airlines (UA/UAL)","Boeing 787-9 (B789)",N26952,,0,1,1,Revenue,851,689,808,2088
+2023-11-28,WN1882,"New York / La Guardia (LGA/KLGA)","Chicago / Chicago Midway (MDW/KMDW)",14:18:00,15:33:00,01:49:00,"Southwest Airlines (WN/SWA)"," ()",N7731A,,2,1,1,Nonrev,1605,1785,736,0
+2024-07-30,WN3541,"New York / La Guardia (LGA/KLGA)","Atlanta / Hartsfield-Jackson (ATL/KATL)",21:45:00,00:29:00,01:54:00,"Southwest Airlines (WN/SWA)","Boeing 737-800 (B738)",N8631A,,0,1,1,Nonrev,1605,179,736,231
+2024-08-01,,"Atlanta / Hartsfield-Jackson (ATL/KATL)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,01:32:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Revenue,179,1785,736,0
+2024-07-26,WN743,"Dallas / Dallas Love Fld (DAL/KDAL)","New York / La Guardia (LGA/KLGA)",15:03:00,19:09:00,03:06:00,"Southwest Airlines (WN/SWA)","Boeing 737-800 (B738)",N8692F,,0,1,2,Revenue,672,1605,736,231
+2024-07-22,WN4593,"San Diego / San Diego International (SAN/KSAN)","Dallas / Dallas Love Fld (DAL/KDAL)",17:45:00,22:45:00,03:00:00,"Southwest Airlines (WN/SWA)","Boeing 737-700 (B737)",N785SW,,0,1,2,Revenue,2589,672,736,230
+2024-07-19,WN4434,"Chicago / Chicago Midway (MDW/KMDW)","San Diego / San Diego International (SAN/KSAN)",05:32:00,07:14:00,04:00:00,"Southwest Airlines (WN/SWA)","Boeing 737-700 (B737)",N908WN,,0,1,1,Nonrev,1785,2589,736,230
+2025-07-12,WN1500,"Chicago / Chicago Midway (MDW/KMDW)","Detroit / Detroit Metropolitan Wayne Co (DTW/KDTW)",09:15:00,11:25:00,01:10:00,"Southwest Airlines (WN/SWA)","Boeing 737-800 (B738)",N8633A,,0,1,1,Revenue,1785,756,736,231
+2025-07-13,WN857,"Detroit / Detroit Metropolitan Wayne Co (DTW/KDTW)","Chicago / Chicago Midway (MDW/KMDW)",15:15:00,15:25:00,01:10:00,"Southwest Airlines (WN/SWA)","Boeing 737-800 (B738)",N8569Z,,2,1,1,Revenue,756,1785,736,231
+2025-08-02,WN3122,"Chicago / Chicago Midway (MDW/KMDW)","New York / La Guardia (LGA/KLGA)",16:25:00,19:35:00,02:10:00,"Southwest Airlines (WN/SWA)","Boeing 737-800 (B738)",N8313F,,1,1,1,Revenue,1785,1605,736,231
+2025-08-05,UA546,"Newark / Liberty International (EWR/KEWR)","Chicago / O'Hare (ORD/KORD)",19:54:00,21:36:00,02:42:00,"United Airlines (UA/UAL)","Boeing 737-900 (B739)",N68802,,0,1,1,Nonrev,851,2205,808,232
+2025-09-06,WN2406,"Chicago / Chicago Midway (MDW/KMDW)","Sacramento / Sacramento (SMF/KSMF)",13:35:00,15:55:00,04:20:00,"Southwest Airlines (WN/SWA)","Boeing 737 MAX 8 (B38M)",N8790Q,,0,1,1,Revenue,1785,2718,736,2123
+2025-09-07,WN3496,"Sacramento / Sacramento (SMF/KSMF)","Chicago / Chicago Midway (MDW/KMDW)",06:55:00,12:50:00,03:55:00,"Southwest Airlines (WN/SWA)","Boeing 737 MAX 8 (B38M)",N8833L,,3,1,1,Revenue,2718,1785,736,2123
+2025-09-14,WN61,"Chicago / Chicago Midway (MDW/KMDW)","Omaha / Eppley Airfield (OMA/KOMA)",16:35:00,18:05:00,01:30:00,"Southwest Airlines (WN/SWA)","Boeing 737 MAX 8 (B38M)",N8932Q,,2,1,2,Revenue,1785,2185,736,2123
+2025-09-14,WN61,"Omaha / Eppley Airfield (OMA/KOMA)","Dallas / Dallas Love Fld (DAL/KDAL)",18:50:00,20:35:00,01:45:00,"Southwest Airlines (WN/SWA)","Boeing 737 MAX 8 (B38M)",N8932Q,,1,1,2,Revenue,2185,672,736,2123
+2024-06-05,WN2645,"New York / La Guardia (LGA/KLGA)","Chicago / Chicago Midway (MDW/KMDW)",22:01:00,23:18:00,01:49:00,"Southwest Airlines (WN/SWA)","Boeing 737-800 (B738)",N8657B,,0,1,1,Nonrev,1605,1785,736,231
+2024-06-13,WN1984,"Chicago / Chicago Midway (MDW/KMDW)","New York / La Guardia (LGA/KLGA)",20:20:00,23:38:00,01:49:00,"Southwest Airlines (WN/SWA)","Boeing 737 MAX 8 (B38M)",N8850Q,,0,1,1,Nonrev,1785,1605,736,2123
+2024-06-17,WN4580,"New York / La Guardia (LGA/KLGA)","Chicago / Chicago Midway (MDW/KMDW)",21:47:00,22:35:00,01:49:00,"Southwest Airlines (WN/SWA)","Boeing 737-700 (B737)",N277WN,,0,1,1,Nonrev,1605,1785,736,230
+2024-05-12,WN3079,"Dallas / Dallas Love Fld (DAL/KDAL)","Chicago / Chicago Midway (MDW/KMDW)",07:32:00,09:26:00,01:58:00,"Southwest Airlines (WN/SWA)","Boeing 737-800 (B738)",N8613K,,0,1,1,Nonrev,672,1785,736,231
+2024-05-10,WN5190,"Chicago / Chicago Midway (MDW/KMDW)","Dallas / Dallas Love Fld (DAL/KDAL)",20:44:00,22:48:00,01:58:00,"Southwest Airlines (WN/SWA)","Boeing 737 MAX 8 (B38M)",N8803L,,0,1,1,Nonrev,1785,672,736,2123
+2024-05-11,,"Dallas-Ft Worth / Dallas-Ft Worth (DFW/KDFW)","College Station / Easterwood Fld (CLL/KCLL)",00:00:00,00:00:00,00:36:00,"American Airlines (AA/AAL)"," ()",,,0,1,1,Revenue,695,571,4,0
+2024-05-11,,"College Station / Easterwood Fld (CLL/KCLL)","Dallas-Ft Worth / Dallas-Ft Worth (DFW/KDFW)",00:00:00,00:00:00,00:36:00,"American Airlines (AA/AAL)"," ()",,,0,1,1,Revenue,571,695,4,0
+2024-04-19,WN667,"Chicago / Chicago Midway (MDW/KMDW)","Kansas City / Kansas City (MCI/KMCI)",22:14:00,23:37:00,01:07:00,"Southwest Airlines (WN/SWA)","Boeing 737-800 (B738)",N8541W,,0,1,1,Nonrev,1785,1765,736,231
+2024-04-21,,"Kansas City / Kansas City (MCI/KMCI)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,01:07:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Revenue,1765,1785,736,0
+2024-04-08,WN4167,"Austin / Robert Mueller (AUS/KAUS)","Chicago / Chicago Midway (MDW/KMDW)",20:25:00,22:36:00,02:21:00,"Southwest Airlines (WN/SWA)","Boeing 737-700 (B737)",N7813P,,0,1,1,Nonrev,190,1785,736,230
+2024-03-20,,"Chicago / Chicago Midway (MDW/KMDW)","Dallas / Dallas Love Fld (DAL/KDAL)",00:00:00,00:00:00,01:58:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Revenue,1785,672,736,0
+2024-03-22,WN931,"Dallas / Dallas Love Fld (DAL/KDAL)","Austin / Robert Mueller (AUS/KAUS)",08:05:00,09:10:00,01:05:00,"Southwest Airlines (WN/SWA)","Boeing 737-700 (B737)",N262WN,,0,1,1,Nonrev,672,190,736,230
+2024-03-24,,"Austin / Robert Mueller (AUS/KAUS)","Dallas / Dallas Love Fld (DAL/KDAL)",00:00:00,00:00:00,00:39:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Revenue,190,672,736,0
+2024-03-25,WN2544,"Dallas / Dallas Love Fld (DAL/KDAL)","Chicago / Chicago Midway (MDW/KMDW)",06:17:00,08:12:00,01:58:00,"Southwest Airlines (WN/SWA)"," ()",N8711Q,,0,1,1,Nonrev,672,1785,736,0
+2024-03-17,WN4254,"Chicago / Chicago Midway (MDW/KMDW)","Grand Rapids / Kent Co (GRR/KGRR)",09:44:00,11:19:00,00:32:00,"Southwest Airlines (WN/SWA)","Boeing 737-700 (B737)",N282WN,,0,1,1,Nonrev,1785,1041,736,230
+2024-03-17,WN2571,"Grand Rapids / Kent Co (GRR/KGRR)","Chicago / Chicago Midway (MDW/KMDW)",19:42:00,19:28:00,00:32:00,"Southwest Airlines (WN/SWA)"," ()",N954WN,,0,1,1,Nonrev,1041,1785,736,0
+2024-04-01,,"Chicago / Chicago Midway (MDW/KMDW)","Dallas / Dallas Love Fld (DAL/KDAL)",00:00:00,00:00:00,01:58:00,"Southwest Airlines (WN/SWA)","Boeing 737-700 (B737)",,,0,1,2,Revenue,1785,672,736,230
+2024-04-04,WN5202,"Dallas / Dallas Love Fld (DAL/KDAL)","Austin / Robert Mueller (AUS/KAUS)",18:27:00,19:08:00,00:39:00,"Southwest Airlines (WN/SWA)","Boeing 737-700 (B737)",N8581Z,,0,1,2,Revenue,672,190,736,230
+2024-02-04,WN3755,"Austin / Robert Mueller (AUS/KAUS)","Chicago / Chicago Midway (MDW/KMDW)",05:26:00,07:40:00,02:21:00,"Southwest Airlines (WN/SWA)"," ()",N8529Z,,0,1,1,Nonrev,190,1785,736,0
+2024-01-31,WN2523,"Chicago / Chicago Midway (MDW/KMDW)","Dallas / Dallas Love Fld (DAL/KDAL)",20:06:00,22:08:00,01:58:00,"Southwest Airlines (WN/SWA)","Boeing 737-800 (B738)",N8692F,,0,1,1,Nonrev,1785,672,736,231
+2024-02-01,WN2100,"Dallas / Dallas Love Fld (DAL/KDAL)","Austin / Robert Mueller (AUS/KAUS)",20:54:00,21:36:00,00:39:00,"Southwest Airlines (WN/SWA)","Boeing 737-800 (B738)",N8518R,,0,1,1,Nonrev,672,190,736,231
+2023-12-21,WN2842,"Chicago / Chicago Midway (MDW/KMDW)","New York / La Guardia (LGA/KLGA)",19:52:00,22:42:00,01:49:00,"Southwest Airlines (WN/SWA)"," ()",N8840Q,,0,1,1,Nonrev,1785,1605,736,0
+2024-01-07,,"New York / La Guardia (LGA/KLGA)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,01:49:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Revenue,1605,1785,736,0
+2023-12-03,WN1107,"Phoenix / Sky Harbor (PHX/KPHX)","Chicago / Chicago Midway (MDW/KMDW)",05:16:00,09:21:00,03:23:00,"Southwest Airlines (WN/SWA)","Boeing 737-800 (B738)",N958WN,,0,1,1,Nonrev,2315,1785,736,231
+2023-12-01,WN565,"Chicago / Chicago Midway (MDW/KMDW)","Phoenix / Sky Harbor (PHX/KPHX)",21:11:00,23:55:00,03:23:00,"Southwest Airlines (WN/SWA)"," ()",N8723Q,,0,1,1,Nonrev,1785,2315,736,0
+2023-11-12,WN2124,"Chicago / Chicago Midway (MDW/KMDW)","New York / La Guardia (LGA/KLGA)",13:42:00,16:20:00,01:49:00,"Southwest Airlines (WN/SWA)"," ()",N7878A,,0,1,1,Nonrev,1785,1605,736,0
+2022-04-09,,"Richmond / Richmond Byrd Fld (RIC/KRIC)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,01:36:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Nonrev,2519,1785,736,0
+2022-04-16,,"Chicago / Chicago Midway (MDW/KMDW)","Richmond / Richmond Byrd Fld (RIC/KRIC)",00:00:00,00:00:00,01:36:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Nonrev,1785,2519,736,0
+2022-06-04,,"Richmond / Richmond Byrd Fld (RIC/KRIC)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,01:36:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Nonrev,2519,1785,736,0
+2022-11-18,,"Pune / Lohegaon (PNQ/VAPO)","Goa / Dabolim (GOI/VAGO)",00:00:00,00:00:00,00:43:00,"SpiceJet (SG/SEJ)"," ()",,,0,1,1,Revenue,2367,1023,1118,0
+2022-11-22,,"Goa / Dabolim (GOI/VAGO)","Delhi / Indira Gandhi (DEL/VIDP)",00:00:00,00:00:00,02:17:00,"Vistara (UK/VTI)"," ()",,,0,1,1,Revenue,1023,689,2079,0
+2022-11-11,EK236,"Chicago / O'Hare (ORD/KORD)","Dubai / Dubai International (DXB/OMDB)",20:35:00,19:10:00,13:35:00,"Emirates (EK/UAE)","Boeing 777-300ER (B77W)",A6-EQF,,1,1,1,Revenue,2205,768,807,2023
+2022-11-12,EK512,"Dubai / Dubai International (DXB/OMDB)","Delhi / Indira Gandhi (DEL/VIDP)",21:40:00,02:35:00,03:55:00,"Emirates (EK/UAE)","Boeing 777-300ER (B77W)",A6-EPC,,0,1,1,Revenue,768,689,807,2023
+2022-11-25,EK513,"Delhi / Indira Gandhi (DEL/VIDP)","Dubai / Dubai International (DXB/OMDB)",04:15:00,06:20:00,03:05:00,"Emirates (EK/UAE)","Boeing 777-300ER (B77W)",A6-EPL,,0,1,1,Revenue,689,768,807,2023
+2022-11-25,EK235,"Dubai / Dubai International (DXB/OMDB)","Chicago / O'Hare (ORD/KORD)",09:55:00,15:45:00,14:50:00,"Emirates (EK/UAE)","Boeing 777-300ER (B77W)",A6-EPW,,1,1,1,Revenue,768,2205,807,2023
+2022-11-14,UK971,"Delhi / Indira Gandhi (DEL/VIDP)","Pune / Lohegaon (PNQ/VAPO)",05:56:00,07:58:18,01:48:00,"Vistara (UK/VTI)"," ()",VTTNU,,0,1,1,Revenue,689,2367,2079,0
+2022-11-27,,"Chicago / Chicago Midway (MDW/KMDW)","Las Vegas / McCarran (LAS/KLAS)",00:00:00,00:00:00,03:32:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,2,Revenue,1785,1557,736,0
+2022-12-01,,"Las Vegas / McCarran (LAS/KLAS)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,03:32:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,2,Nonrev,1557,1785,736,0
+2022-12-12,,"Detroit / Detroit Metropolitan Wayne Co (DTW/KDTW)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,00:44:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Nonrev,756,1785,736,0
+2022-12-21,UA1774,"Chicago / O'Hare (ORD/KORD)","Newark / Liberty International (EWR/KEWR)",20:45:00,00:30:00,02:45:00,"United Airlines (UA/UAL)","Boeing 737-900ER (B739)",N67815,1B,3,2,1,Revenue,2205,851,808,2069
+2022-12-26,UA2465,"Newark / Liberty International (EWR/KEWR)","Miami / Miami International (MIA/KMIA)",06:44:00,09:42:00,02:58:00,"United Airlines (UA/UAL)","Boeing 737-800 (B738)",N78509,,0,1,1,Revenue,851,1831,808,231
+2022-12-31,,"Fort Lauderdale / Hollywood (FLL/KFLL)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,02:47:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Nonrev,892,1785,736,0
+2024-02-15,,"Chicago / Chicago Midway (MDW/KMDW)","Las Vegas / McCarran (LAS/KLAS)",00:00:00,00:00:00,03:32:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Revenue,1785,1557,736,0
+2024-02-15,,"Las Vegas / McCarran (LAS/KLAS)","San Jose / San Jose (SJC/KSJC)",00:00:00,00:00:00,01:05:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Revenue,1557,2680,736,0
+2024-02-19,,"San Jose / San Jose (SJC/KSJC)","Las Vegas / McCarran (LAS/KLAS)",00:00:00,00:00:00,01:05:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Revenue,2680,1557,736,0
+2024-02-19,,"Las Vegas / McCarran (LAS/KLAS)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,03:32:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Revenue,1557,1785,736,0
+2022-12-09,,"Chicago / Chicago Midway (MDW/KMDW)","Detroit / Detroit Metropolitan Wayne Co (DTW/KDTW)",00:00:00,00:00:00,00:44:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Nonrev,1785,756,736,0
+2022-06-26,WN1743,"Chicago / Chicago Midway (MDW/KMDW)","Long Beach / Daugherty Fld (LGB/KLGB)",09:50:00,12:05:00,04:15:00,"Southwest Airlines (WN/SWA)","Boeing 737-800 (B738)",N8673F,,0,1,1,Nonrev,1785,1606,736,231
+2022-07-03,WN2620,"San Diego / San Diego International (SAN/KSAN)","Chicago / Chicago Midway (MDW/KMDW)",19:56:00,01:43:00,04:00:00,"Southwest Airlines (WN/SWA)","Boeing 737-700 (B737)",N430WN,,0,1,1,Nonrev,2589,1785,736,230
+2022-07-29,,"Chicago / Chicago Midway (MDW/KMDW)","Richmond / Richmond Byrd Fld (RIC/KRIC)",00:00:00,00:00:00,01:36:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Nonrev,1785,2519,736,0
+2022-07-31,WN1772,"Richmond / Richmond Byrd Fld (RIC/KRIC)","Chicago / Chicago Midway (MDW/KMDW)",20:05:00,21:02:00,01:57:00,"Southwest Airlines (WN/SWA)","Boeing 737 MAX 8 (B38M)",N8803L,,0,1,1,Nonrev,2519,1785,736,2123
+2022-02-18,DL2351,"Richmond / Richmond Byrd Fld (RIC/KRIC)","Atlanta / Hartsfield-Jackson (ATL/KATL)",13:04:00,14:40:27,01:17:00,"Delta Air Lines (DL/DAL)","Boeing 737-900ER (B739)",N916DU,,0,1,1,Revenue,2519,179,223,2069
+2022-02-18,DL335,"Atlanta / Hartsfield-Jackson (ATL/KATL)","Los Angeles / Los Angeles International (LAX/KLAX)",15:37:00,17:27:00,04:28:00,"Delta Air Lines (DL/DAL)","Airbus A321-200 (A321)",N327DN,,0,1,1,Revenue,179,1559,223,2076
+2022-02-22,UA786,"Los Angeles / Los Angeles International (LAX/KLAX)","Newark / Liberty International (EWR/KEWR)",10:43:00,18:25:00,05:34:00,"United Airlines (UA/UAL)","Boeing 757-200 (B752)",N17122,,0,1,1,Revenue,1559,851,808,241
+2023-06-09,,"Chicago / Chicago Midway (MDW/KMDW)","Richmond / Richmond Byrd Fld (RIC/KRIC)",00:00:00,00:00:00,01:36:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Nonrev,1785,2519,736,0
+2023-06-10,,"Washington / Washington National (DCA/KDCA)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,01:33:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Nonrev,682,1785,736,0
+2023-07-30,,"Chicago / Chicago Midway (MDW/KMDW)","Washington / Washington National (DCA/KDCA)",00:00:00,00:00:00,01:33:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Nonrev,1785,682,736,0
+2023-07-30,,"Washington / Dulles (IAD/KIAD)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,01:30:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Revenue,1202,1785,736,0
+2021-12-25,UA1462,"Newark / Liberty International (EWR/KEWR)","Montego Bay / Montego Bay (MBJ/MKJS)",08:40:00,12:13:34,03:37:00,"United Airlines (UA/UAL)","Boeing 737-900ER (B739)",N62896,,0,1,1,Revenue,851,1756,808,2069
+2021-12-31,,"Montego Bay / Montego Bay (MBJ/MKJS)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,03:37:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,1756,851,808,0
+2019-04-11,,"Newark / Liberty International (EWR/KEWR)","Richmond / Richmond Byrd Fld (RIC/KRIC)",00:00:00,00:00:00,00:51:00,"United Airlines (UA/UAL)"," ()",,,0,1,2,Revenue,851,2519,808,0
+2019-04-12,,"Richmond / Richmond Byrd Fld (RIC/KRIC)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,00:51:00,"United Airlines (UA/UAL)"," ()",,,0,1,2,Revenue,2519,851,808,0
+2019-07-06,,"London / Heathrow (LHR/EGLL)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,07:45:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,1618,851,808,0
+2019-06-24,,"Newark / Liberty International (EWR/KEWR)","London / Heathrow (LHR/EGLL)",00:00:00,00:00:00,07:45:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,851,1618,808,0
+2019-02-15,AS163,"Newark / Liberty International (EWR/KEWR)","San Francisco / San Francisco International (SFO/KSFO)",07:20:00,11:15:00,06:55:00,"Alaska Airlines (AS/ASA)","Boeing 737-900ER (B739)",N413AS,33F,1,1,1,Revenue,851,2644,79,2069
+2019-02-18,,"San Francisco / San Francisco International (SFO/KSFO)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,05:48:00,"Alaska Airlines (AS/ASA)"," ()",,,0,1,1,Revenue,2644,851,79,0
+2021-08-10,,"Richmond / Richmond Byrd Fld (RIC/KRIC)","Houston / George Bush Intercontinental (IAH/KIAH)",00:00:00,00:00:00,02:45:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,2519,1204,808,0
+2021-08-10,,"Houston / George Bush Intercontinental (IAH/KIAH)","Los Angeles / Los Angeles International (LAX/KLAX)",00:00:00,00:00:00,03:14:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,1204,1559,808,0
+2021-08-15,,"Los Angeles / Los Angeles International (LAX/KLAX)","Denver / Denver (DEN/KDEN)",00:00:00,00:00:00,02:07:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,1559,691,808,0
+2021-08-15,,"Denver / Denver (DEN/KDEN)","Richmond / Richmond Byrd Fld (RIC/KRIC)",00:00:00,00:00:00,03:27:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,691,2519,808,0
+2023-10-23,WN2699,"Austin / Robert Mueller (AUS/KAUS)","Chicago / Chicago Midway (MDW/KMDW)",16:40:00,21:13:00,02:21:00,"Southwest Airlines (WN/SWA)","Boeing 737 MAX 8 (B38M)",N8639B,,0,1,1,Nonrev,190,1785,736,2123
+2023-10-19,WN2461,"Chicago / Chicago Midway (MDW/KMDW)","Austin / Robert Mueller (AUS/KAUS)",21:33:00,23:42:00,02:21:00,"Southwest Airlines (WN/SWA)","Boeing 737-700 (B737)",N482WN,,0,1,1,Nonrev,1785,190,736,230
+2023-10-08,WN1893,"New York / La Guardia (LGA/KLGA)","Chicago / Chicago Midway (MDW/KMDW)",19:35:00,20:30:00,01:49:00,"Southwest Airlines (WN/SWA)","Boeing 737-700 (B737)",N485WN,,0,1,1,Nonrev,1605,1785,736,230
+2023-08-26,,"Chicago / Chicago Midway (MDW/KMDW)","Pittsburgh / Pittsburgh (PIT/KPIT)",00:00:00,00:00:00,01:07:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Nonrev,1785,2321,736,0
+2023-08-27,,"Pittsburgh / Pittsburgh (PIT/KPIT)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,01:07:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Nonrev,2321,1785,736,0
+2023-07-05,,"Detroit / Detroit Metropolitan Wayne Co (DTW/KDTW)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,00:44:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Nonrev,756,1785,736,0
+2023-07-15,,"Chicago / Chicago Midway (MDW/KMDW)","Cincinnati / Northern Kentucky Int (CVG/KCVG)",00:00:00,00:00:00,00:47:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Nonrev,1785,646,736,0
+2023-07-16,,"Cincinnati / Northern Kentucky Int (CVG/KCVG)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,00:47:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Nonrev,646,1785,736,0
+2023-05-30,UA727,"Panama City / Tocumen (PTY/MPTO)","Newark / Liberty International (EWR/KEWR)",09:26:00,15:06:00,05:03:00,"United Airlines (UA/UAL)"," ()",N36472,,0,1,1,Revenue,2418,851,808,0
+2023-05-31,,"New York / La Guardia (LGA/KLGA)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,01:49:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Nonrev,1605,1785,736,0
+2023-05-25,UA1021,"Newark / Liberty International (EWR/KEWR)","Panama City / Tocumen (PTY/MPTO)",17:04:00,00:38:00,05:03:00,"United Airlines (UA/UAL)"," ()",N27477,,0,1,1,Revenue,851,2418,808,0
+2023-05-13,UA2327,"Chicago / O'Hare (ORD/KORD)","Newark / Liberty International (EWR/KEWR)",11:47:00,15:02:00,02:15:00,"United Airlines (UA/UAL)"," ()",N37255,,0,1,1,Revenue,2205,851,808,0
+2023-04-05,,"Dallas / Dallas Love Fld (DAL/KDAL)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,01:58:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,2,Nonrev,672,1785,736,0
+2023-04-03,,"Chicago / Chicago Midway (MDW/KMDW)","Dallas / Dallas Love Fld (DAL/KDAL)",00:00:00,00:00:00,01:58:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,2,Revenue,1785,672,736,0
+2023-03-03,,"Dallas / Dallas Love Fld (DAL/KDAL)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,01:58:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Nonrev,672,1785,736,0
+2023-03-01,WN3488,"Chicago / Chicago Midway (MDW/KMDW)","Dallas / Dallas Love Fld (DAL/KDAL)",20:55:00,23:20:00,02:25:00,"Southwest Airlines (WN/SWA)","Boeing 737-700 (B737)",N923WN,,0,1,1,Nonrev,1785,672,736,230
+2023-02-26,,"Chicago / Chicago Midway (MDW/KMDW)","Dallas / Dallas Love Fld (DAL/KDAL)",00:00:00,00:00:00,01:58:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Nonrev,1785,672,736,0
+2023-02-26,,"Dallas / Dallas Love Fld (DAL/KDAL)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,01:58:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Revenue,672,1785,736,0
+2023-02-06,,"New York / La Guardia (LGA/KLGA)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,01:49:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Nonrev,1605,1785,736,0
+2023-02-03,UA2177,"Chicago / O'Hare (ORD/KORD)","Newark / Liberty International (EWR/KEWR)",12:47:00,16:04:00,02:17:00,"United Airlines (UA/UAL)"," ()",N33266,,0,1,1,Revenue,2205,851,808,0
+2022-10-22,UA224,"Chicago / O'Hare (ORD/KORD)","Newark / Liberty International (EWR/KEWR)",13:05:00,16:18:00,01:48:00,"United Airlines (UA/UAL)"," ()",N78511,,0,1,1,Revenue,2205,851,808,0
+2022-10-26,UA1234,"Newark / Liberty International (EWR/KEWR)","Chicago / O'Hare (ORD/KORD)",20:17:00,21:18:00,01:48:00,"United Airlines (UA/UAL)"," ()",N823UA,,0,1,1,Revenue,851,2205,808,0
+2023-11-19,,"Delhi / Indira Gandhi (DEL/VIDP)","Pune / Lohegaon (PNQ/VAPO)",00:00:00,00:00:00,01:48:00,"Vistara (UK/VTI)"," ()",,,0,1,1,Revenue,689,2367,2079,0
+2023-11-24,,"Pune / Lohegaon (PNQ/VAPO)","Delhi / Indira Gandhi (DEL/VIDP)",00:00:00,00:00:00,01:48:00,"Vistara (UK/VTI)"," ()",,,0,1,1,Revenue,2367,689,2079,0
+2023-09-25,,"Chicago / Chicago Midway (MDW/KMDW)","Dallas / Dallas Love Fld (DAL/KDAL)",00:00:00,00:00:00,01:58:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,2,Revenue,1785,672,736,0
+2023-09-29,,"Dallas / Dallas Love Fld (DAL/KDAL)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,01:58:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,2,Revenue,672,1785,736,0
+2023-10-05,UA1774,"Chicago / O'Hare (ORD/KORD)","Newark / Liberty International (EWR/KEWR)",23:12:00,01:57:00,01:48:00,"United Airlines (UA/UAL)"," ()",N19141,,0,1,1,Revenue,2205,851,808,0
+2025-09-18,WN2619,"Dallas / Dallas Love Fld (DAL/KDAL)","Chicago / Chicago Midway (MDW/KMDW)",20:20:00,22:30:00,02:10:00,"Southwest Airlines (WN/SWA)","Boeing 737-700 (B737)",N563WN,5D,3,1,2,Revenue,672,1785,736,230
+2022-05-10,,"Newark / Liberty International (EWR/KEWR)","Richmond / Richmond Byrd Fld (RIC/KRIC)",00:00:00,00:00:00,00:51:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,851,2519,808,0
+2018-07-25,UA743,"Newark / Liberty International (EWR/KEWR)","Chicago / O'Hare (ORD/KORD)",15:05:00,16:38:00,02:33:00,"United Airlines (UA/UAL)","Airbus A320-200 (A320)",N415UA,38A,1,1,2,Revenue,851,2205,808,2059
+2018-07-27,,"Chicago / O'Hare (ORD/KORD)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,01:48:00,"United Airlines (UA/UAL)"," ()",,,0,1,2,Revenue,2205,851,808,0
+2018-02-16,,"Newark / Liberty International (EWR/KEWR)","San Francisco / San Francisco International (SFO/KSFO)",00:00:00,00:00:00,05:48:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,851,2644,808,0
+2018-02-19,,"San Francisco / San Francisco International (SFO/KSFO)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,05:48:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,2644,851,808,0
+2017-12-23,,"Newark / Liberty International (EWR/KEWR)","Athens / Eleftherios Venizelos (ATH/LGAV)",00:00:00,00:00:00,11:00:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,851,3583,808,0
+2017-12-30,,"Athens / Eleftherios Venizelos (ATH/LGAV)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,11:00:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,3583,851,808,0
+2017-08-20,,"Newark / Liberty International (EWR/KEWR)","Savannah / Savannah (SAV/KSAV)",00:00:00,00:00:00,01:47:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,851,2593,808,0
+2017-08-22,,"Savannah / Savannah (SAV/KSAV)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,01:47:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,2593,851,808,0
+2017-01-01,,"Delhi / Indira Gandhi (DEL/VIDP)","Moscow / Sheremetyevo (SVO/UUEE)",00:00:00,00:00:00,06:08:00,"Aeroflot (SU/AFL)"," ()",,,0,1,1,Revenue,689,2816,33,0
+2017-01-02,,"Moscow / Sheremetyevo (SVO/UUEE)","New York / John F Kennedy (JFK/KJFK)",00:00:00,00:00:00,10:21:00,"Aeroflot (SU/AFL)"," ()",,,0,1,1,Revenue,2816,1328,33,0
+2016-12-21,,"New York / John F Kennedy (JFK/KJFK)","Moscow / Sheremetyevo (SVO/UUEE)",00:00:00,00:00:00,10:21:00,"Aeroflot (SU/AFL)"," ()",,,0,1,1,Revenue,1328,2816,33,0
+2016-12-22,,"Moscow / Sheremetyevo (SVO/UUEE)","Delhi / Indira Gandhi (DEL/VIDP)",00:00:00,00:00:00,06:08:00,"Aeroflot (SU/AFL)"," ()",,,0,1,1,Revenue,2816,689,33,0
+2014-12-15,,"Cleveland / Hopkins (CLE/KCLE)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,01:07:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,568,851,808,0
+2014-12-17,,"New York / John F Kennedy (JFK/KJFK)","Shanghai / Pudong (PVG/ZSPD)",00:00:00,00:00:00,16:17:00,"China Eastern Airlines (MU/CES)"," ()",,,0,1,1,Revenue,1328,3653,178,0
+2014-12-18,,"Shanghai / Pudong (PVG/ZSPD)","Sydney / Kingsford Smith (SYD/YSSY)",00:00:00,00:00:00,10:52:00,"China Eastern Airlines (MU/CES)"," ()",,,0,1,1,Revenue,3653,2834,178,0
+2014-12-30,,"Sydney / Kingsford Smith (SYD/YSSY)","Shanghai / Pudong (PVG/ZSPD)",00:00:00,00:00:00,10:52:00,"China Eastern Airlines (MU/CES)"," ()",,,0,1,1,Revenue,2834,3653,178,0
+2014-12-31,,"Shanghai / Pudong (PVG/ZSPD)","New York / John F Kennedy (JFK/KJFK)",00:00:00,00:00:00,16:17:00,"China Eastern Airlines (MU/CES)"," ()",,,0,1,1,Revenue,3653,1328,178,0
+2014-12-21,,"Sydney / Kingsford Smith (SYD/YSSY)","Cairns / Cairns (CNS/YBCS)",00:00:00,00:00:00,02:54:00,"Qantas Airways (QF/QFA)"," ()",,,0,1,1,Revenue,2834,591,631,0
+2014-12-24,,"Cairns / Cairns (CNS/YBCS)","Sydney / Kingsford Smith (SYD/YSSY)",00:00:00,00:00:00,02:54:00,"Qantas Airways (QF/QFA)"," ()",,,0,1,1,Revenue,591,2834,631,0
+2015-12-25,,"Newark / Liberty International (EWR/KEWR)","San Francisco / San Francisco International (SFO/KSFO)",00:00:00,00:00:00,05:48:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,851,2644,808,0
+2015-12-31,,"San Francisco / San Francisco International (SFO/KSFO)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,05:48:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,2644,851,808,0
+2022-10-31,WN2422,"Richmond / Richmond Byrd Fld (RIC/KRIC)","Chicago / Chicago Midway (MDW/KMDW)",00:14:00,00:53:00,01:53:00,"Southwest Airlines (WN/SWA)","Boeing 737-700 (B737)",N266WN,,0,1,1,Nonrev,2519,1785,736,230
+2022-10-28,,"Chicago / Chicago Midway (MDW/KMDW)","Richmond / Richmond Byrd Fld (RIC/KRIC)",00:00:00,00:00:00,01:36:00,"Southwest Airlines (WN/SWA)","Boeing 737-700 (B737)",,,0,1,1,Nonrev,1785,2519,736,230
+2022-03-13,,"Richmond / Richmond Byrd Fld (RIC/KRIC)","Atlanta / Hartsfield-Jackson (ATL/KATL)",00:00:00,00:00:00,01:17:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,2,Revenue,2519,179,736,0
+2022-03-13,,"Atlanta / Hartsfield-Jackson (ATL/KATL)","Dallas / Dallas Love Fld (DAL/KDAL)",00:00:00,00:00:00,01:48:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,2,Revenue,179,672,736,0
+2022-03-16,,"Dallas / Dallas Love Fld (DAL/KDAL)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,01:58:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,2,Revenue,672,1785,736,0
+2022-03-16,,"Chicago / Chicago Midway (MDW/KMDW)","Richmond / Richmond Byrd Fld (RIC/KRIC)",00:00:00,00:00:00,01:36:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,2,Revenue,1785,2519,736,0
+2022-10-08,WN1342,"Chicago / Chicago Midway (MDW/KMDW)","Dallas / Dallas Love Fld (DAL/KDAL)",12:25:00,14:45:00,02:20:00,"Southwest Airlines (WN/SWA)","Boeing 737-800 (B738)",N8612K,,0,1,1,Nonrev,1785,672,736,231
+2023-12-11,,"Chicago / Chicago Midway (MDW/KMDW)","Dallas / Dallas Love Fld (DAL/KDAL)",00:00:00,00:00:00,01:58:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,2,Revenue,1785,672,736,0
+2023-12-15,,"Dallas / Dallas Love Fld (DAL/KDAL)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,01:58:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,2,Revenue,672,1785,736,0
+2019-11-27,,"Richmond / Richmond Byrd Fld (RIC/KRIC)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,00:51:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,2519,851,808,0
+2019-12-01,,"Newark / Liberty International (EWR/KEWR)","Richmond / Richmond Byrd Fld (RIC/KRIC)",00:00:00,00:00:00,00:51:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,851,2519,808,0
+2011-06-23,,"New York / John F Kennedy (JFK/KJFK)","Zurich / Kloten (ZRH/LSZH)",00:00:00,00:00:00,08:46:00,"Swiss International Airlines (LX/SWR)"," ()",,,0,1,1,Revenue,1328,3548,741,0
+2011-06-24,,"Zurich / Kloten (ZRH/LSZH)","Delhi / Indira Gandhi (DEL/VIDP)",00:00:00,00:00:00,08:33:00,"Swiss International Airlines (LX/SWR)"," ()",,,0,1,1,Revenue,3548,689,741,0
+2011-06-25,,"Delhi / Indira Gandhi (DEL/VIDP)","Leh / Kushok Bakula Rimpochee (IXL/VILH)",00:00:00,00:00:00,01:05:00,"Air India (AI/AIC)"," ()",,,0,1,1,Revenue,689,3744,43,0
+2011-07-02,,"Leh / Kushok Bakula Rimpochee (IXL/VILH)","Delhi / Indira Gandhi (DEL/VIDP)",00:00:00,00:00:00,01:05:00,"Air India (AI/AIC)"," ()",,,0,1,1,Revenue,3744,689,43,0
+2011-07-23,,"Delhi / Indira Gandhi (DEL/VIDP)","Zurich / Kloten (ZRH/LSZH)",00:00:00,00:00:00,08:33:00,"Swiss International Airlines (LX/SWR)"," ()",,,0,1,1,Revenue,689,3548,741,0
+2011-07-24,,"Zurich / Kloten (ZRH/LSZH)","New York / John F Kennedy (JFK/KJFK)",00:00:00,00:00:00,08:46:00,"Swiss International Airlines (LX/SWR)"," ()",,,0,1,1,Revenue,3548,1328,741,0
+2011-08-05,,"Newark / Liberty International (EWR/KEWR)","San Jose / Juan Santamaria (SJO/MROC)",00:00:00,00:00:00,05:03:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,851,2686,808,0
+2011-08-14,,"San Jose / Juan Santamaria (SJO/MROC)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,05:03:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,2686,851,808,0
+2010-12-19,,"Newark / Liberty International (EWR/KEWR)","Aguadilla / Rafael Hernandez (BQN/TJBQ)",00:00:00,00:00:00,03:42:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,851,391,808,0
+2010-12-29,,"Aguadilla / Rafael Hernandez (BQN/TJBQ)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,03:42:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,391,851,808,0
+2008-11-22,,"Akron/Canton / Akron/Canton (CAK/KCAK)","Boston / Logan (BOS/KBOS)",00:00:00,00:00:00,01:26:00,"AirTran Airways (FL/TRS)"," ()",,,0,1,1,Revenue,3621,380,790,0
+2008-11-30,,"Boston / Logan (BOS/KBOS)","Akron/Canton / Akron/Canton (CAK/KCAK)",00:00:00,00:00:00,01:26:00,"AirTran Airways (FL/TRS)"," ()",,,0,1,1,Revenue,380,3621,790,0
+2008-03-17,,"Milan / Malpensa (MXP/LIMC)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,08:56:00,"Continental Airlines (CO/COA)"," ()",,,0,1,1,Revenue,1983,851,196,0
+2008-03-17,,"Newark / Liberty International (EWR/KEWR)","Cleveland / Hopkins (CLE/KCLE)",00:00:00,00:00:00,01:07:00,"Continental Airlines (CO/COA)"," ()",,,0,1,1,Revenue,851,568,196,0
+2008-03-07,,"Cleveland / Hopkins (CLE/KCLE)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,01:07:00,"Continental Airlines (CO/COA)"," ()",,,0,1,1,Revenue,568,851,196,0
+2008-03-07,,"Newark / Liberty International (EWR/KEWR)","Milan / Malpensa (MXP/LIMC)",00:00:00,00:00:00,08:56:00,"Continental Airlines (CO/COA)"," ()",,,0,1,1,Revenue,851,1983,196,0
+2007-08-27,CO83,"Delhi / Indira Gandhi (DEL/VIDP)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,16:08:00,"Continental Airlines (CO/COA)","Boeing 777-200ER (B77E)",,,0,1,1,Revenue,689,851,196,2024
+2007-08-28,,"Newark / Liberty International (EWR/KEWR)","Cleveland / Hopkins (CLE/KCLE)",00:00:00,00:00:00,01:07:00,"Continental Airlines (CO/COA)"," ()",,,0,1,1,Revenue,851,568,196,0
+2007-07-25,,"Cleveland / Hopkins (CLE/KCLE)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,01:07:00,"Continental Airlines (CO/COA)"," ()",,,0,1,1,Revenue,568,851,196,0
+2007-07-25,CO82,"Newark / Liberty International (EWR/KEWR)","Delhi / Indira Gandhi (DEL/VIDP)",00:00:00,00:00:00,16:08:00,"Continental Airlines (CO/COA)","Boeing 777-200ER (B77E)",,,0,1,1,Revenue,851,689,196,2024
+2013-06-25,,"Newark / Liberty International (EWR/KEWR)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,01:47:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Revenue,851,1785,736,0
+2013-06-28,,"Chicago / Chicago Midway (MDW/KMDW)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,01:47:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Revenue,1785,851,736,0
+2005-12-10,,"Cleveland / Hopkins (CLE/KCLE)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,01:07:00,"Continental Airlines (CO/COA)"," ()",,,0,1,1,Revenue,568,851,196,0
+2005-12-10,,"Newark / Liberty International (EWR/KEWR)","Paris / Charles de Gaulle (CDG/LFPG)",00:00:00,00:00:00,08:09:00,"Air France (AF/AFR)","Airbus A340-300 (A343)",,,0,1,1,Revenue,851,509,34,34
+2005-12-16,,"Paris / Charles de Gaulle (CDG/LFPG)","Delhi / Indira Gandhi (DEL/VIDP)",00:00:00,00:00:00,09:07:00,"Air France (AF/AFR)","Boeing 747-400 (B744)",,,0,1,1,Revenue,509,689,34,237
+2006-01-01,,"Paris / Charles de Gaulle (CDG/LFPG)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,08:09:00,"Air France (AF/AFR)","Airbus A340-300 (A343)",,,0,1,1,Revenue,509,851,34,34
+2006-01-01,,"Newark / Liberty International (EWR/KEWR)","Cleveland / Hopkins (CLE/KCLE)",00:00:00,00:00:00,01:07:00,"Continental Airlines (CO/COA)"," ()",,,0,1,1,Revenue,851,568,196,0
+2012-04-07,,"Allentown / Lehigh Valley (ABE/KABE)","Orlando / Orlando (MCO/KMCO)",00:00:00,00:00:00,02:13:00,"Frontier Airlines (F9/FFT)"," ()",,,0,1,1,Revenue,3708,1768,302,0
+2012-04-14,,"Orlando / Orlando (MCO/KMCO)","Allentown / Lehigh Valley (ABE/KABE)",00:00:00,00:00:00,02:13:00,"Frontier Airlines (F9/FFT)"," ()",,,0,1,1,Revenue,1768,3708,302,0
+2017-12-24,,"Athens / Eleftherios Venizelos (ATH/LGAV)","Santorini / Santorini (JTR/LGSR)",00:00:00,00:00:00,00:32:00,"Ryanair (FR/RYR)"," ()",,,0,1,1,Revenue,3583,1366,668,0
+2017-12-27,,"Santorini / Santorini (JTR/LGSR)","Athens / Eleftherios Venizelos (ATH/LGAV)",00:00:00,00:00:00,00:32:00,"Ryanair (FR/RYR)"," ()",,,0,1,1,Revenue,1366,3583,668,0
+2022-10-15,WN2558,"Dallas / Dallas Love Fld (DAL/KDAL)","Chicago / Chicago Midway (MDW/KMDW)",12:21:00,14:17:13,01:58:00,"Southwest Airlines (WN/SWA)","Boeing 737-700 (B737)",N763SW,,0,1,1,Nonrev,672,1785,736,230
+2022-08-19,UA2033,"Chicago / O'Hare (ORD/KORD)","Newark / Liberty International (EWR/KEWR)",18:20:00,21:33:00,01:48:00,"United Airlines (UA/UAL)","Boeing 737-900ER (B739)",N78448,,0,1,1,Revenue,2205,851,808,2069
+2022-08-27,UA1232,"Newark / Liberty International (EWR/KEWR)","Chicago / O'Hare (ORD/KORD)",18:35:00,19:37:00,01:48:00,"United Airlines (UA/UAL)","Airbus A319-100 (A319)",N805UA,,0,1,1,Revenue,851,2205,808,2073
+2015-12-15,,"Cleveland / Hopkins (CLE/KCLE)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,01:07:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,568,851,808,0
+2016-01-18,,"Newark / Liberty International (EWR/KEWR)","Cleveland / Hopkins (CLE/KCLE)",00:00:00,00:00:00,01:07:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,851,568,808,0
+2025-01-31,,"Dallas / Dallas Love Fld (DAL/KDAL)","New York / La Guardia (LGA/KLGA)",00:00:00,00:00:00,03:14:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,2,Revenue,672,1605,736,0
+2025-02-04,UA546,"Newark / Liberty International (EWR/KEWR)","Chicago / O'Hare (ORD/KORD)",19:45:00,21:26:00,02:41:00,"United Airlines (UA/UAL)","Boeing 737 MAX 8 (B38M)",N47298,,0,1,1,Nonrev,851,2205,808,2123
+2025-10-02,AA2549,"Chicago / O'Hare (ORD/KORD)","Newark / Liberty International (EWR/KEWR)",20:41:00,23:59:00,02:18:00,"American Airlines (AA/AAL)","Boeing 737-800 (B738)",N959AN,16D,3,1,1,Nonrev,2205,851,4,231
+2025-10-05,WN3543,"New York / La Guardia (LGA/KLGA)","Chicago / Chicago Midway (MDW/KMDW)",21:50:00,23:15:00,02:25:00,"Southwest Airlines (WN/SWA)","Boeing 737-700 (B737)",N256WN,2A,1,1,1,Revenue,1605,1785,736,230
+2025-10-18,UA485,"Chicago / O'Hare (ORD/KORD)","Newark / Liberty International (EWR/KEWR)",17:05:00,20:32:00,02:27:00,"United Airlines (UA/UAL)","Boeing 737 MAX 9 (B39M)",N37536,20F,1,1,1,Nonrev,2205,851,808,2124
+2002-08-10,,"Newark / Liberty International (EWR/KEWR)","Anchorage / Anchorage (ANC/PANC)",00:00:00,00:00:00,07:33:00,"Continental Airlines (CO/COA)"," ()",,,0,1,1,Revenue,851,124,196,0
+2002-08-20,,"Anchorage / Anchorage (ANC/PANC)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,07:33:00,"Continental Airlines (CO/COA)"," ()",,,0,1,1,Revenue,124,851,196,0
+2025-10-26,AA4041,"Newark / Liberty International (EWR/KEWR)","Chicago / O'Hare (ORD/KORD)",13:59:00,15:40:00,02:41:00,"American Airlines (AA/AAL)","Embraer ERJ-170 (E170)",N761RW,20F,1,1,1,Revenue,851,2205,4,654
+2011-08-22,,"Newark / Liberty International (EWR/KEWR)","Charleston / Charleston (CHS/KCHS)",00:00:00,00:00:00,01:37:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,851,548,808,0
+2014-11-26,,"Cleveland / Hopkins (CLE/KCLE)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,01:07:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,568,851,808,0
+2011-08-28,,"Charleston / Charleston (CHS/KCHS)","Charlotte / Douglas (CLT/KCLT)",00:00:00,00:00:00,00:36:00,"American Airlines (AA/AAL)"," ()",,,0,1,1,Revenue,548,575,4,0
+2011-08-28,,"Charlotte / Douglas (CLT/KCLT)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,01:23:00,"American Airlines (AA/AAL)"," ()",,,0,1,1,Revenue,575,851,4,0
+2016-03-12,,"Cleveland / Hopkins (CLE/KCLE)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,00:54:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Revenue,568,1785,736,0
+2016-03-12,,"Chicago / Chicago Midway (MDW/KMDW)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,01:47:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Revenue,1785,851,736,0
+2025-11-11,UA2362,"Chicago / O'Hare (ORD/KORD)","Newark / Liberty International (EWR/KEWR)",19:51:00,23:13:00,02:22:00,"United Airlines (UA/UAL)","Boeing 737-900 (B739)",N69833,36A,1,1,1,Revenue,2205,851,808,232
+2025-11-14,AI102,"New York / John F Kennedy (JFK/KJFK)","Delhi / Indira Gandhi (DEL/VIDP)",10:55:00,12:20:00,15:25:00,"Air India (AI/AIC)","Airbus A350-900 (A359)",VT-JRF,22C,3,1,1,Nonrev,1328,689,43,2110
+2025-11-15,AI1740,"Delhi / Indira Gandhi (DEL/VIDP)","Pune / Lohegaon (PNQ/VAPO)",17:40:00,20:00:00,02:20:00,"Air India (AI/AIC)","Airbus A319-100 (A319)",VT-SCQ,6E,2,1,1,Revenue,689,2367,43,2073
+2025-11-27,6E6675,"Pune / Lohegaon (PNQ/VAPO)","Delhi / Indira Gandhi (DEL/VIDP)",07:35:00,09:50:00,02:15:00,"IndiGo (6E/IGO)","Airbus A321neo (A21N)",VT-ILT,35C,3,1,1,Revenue,2367,689,1122,2128
+2025-11-30,UA83,"Delhi / Indira Gandhi (DEL/VIDP)","Newark / Liberty International (EWR/KEWR)",23:55:00,06:25:00,16:30:00,"United Airlines (UA/UAL)","Boeing 787-9 (B789)",N29977,35F,3,1,1,Revenue,689,851,808,2088
+2025-12-02,UA2701,"Newark / Liberty International (EWR/KEWR)","Chicago / O'Hare (ORD/KORD)",06:30:00,08:12:00,02:42:00,"United Airlines (UA/UAL)","Boeing 737-900 (B739)",N69838,26C,3,1,1,Nonrev,851,2205,808,232
+2000-03-25,,"Chennai / Chennai (MAA/VOMM)","Frankfurt am Main / Frankfurt (FRA/EDDF)",00:00:00,00:00:00,10:30:00,"Lufthansa (LH/DLH)","Airbus A340-300 (A343)",,,0,1,1,Revenue,1737,919,239,34
+2000-03-26,,"Frankfurt am Main / Frankfurt (FRA/EDDF)","New York / John F Kennedy (JFK/KJFK)",00:00:00,00:00:00,08:36:00,"Lufthansa (LH/DLH)","Boeing 747-400 (B744)",,,0,1,1,Revenue,919,1328,239,237
+2001-12-24,,"New York / John F Kennedy (JFK/KJFK)","Moscow / Sheremetyevo (SVO/UUEE)",00:00:00,00:00:00,10:21:00,"Aeroflot (SU/AFL)","Ilyushin IL-96 (IL96)",,,0,1,1,Revenue,1328,2816,33,945
+2001-12-25,,"Moscow / Sheremetyevo (SVO/UUEE)","Delhi / Indira Gandhi (DEL/VIDP)",00:00:00,00:00:00,06:08:00,"Aeroflot (SU/AFL)"," ()",,,0,1,1,Revenue,2816,689,33,0
+2002-01-17,,"Moscow / Sheremetyevo (SVO/UUEE)","New York / John F Kennedy (JFK/KJFK)",00:00:00,00:00:00,10:21:00,"Aeroflot (SU/AFL)","Ilyushin IL-96 (IL96)",,,0,1,1,Revenue,2816,1328,33,945
+2003-12-09,,"Cleveland / Hopkins (CLE/KCLE)","New York / John F Kennedy (JFK/KJFK)",00:00:00,00:00:00,01:10:00,"Continental Airlines (CO/COA)"," ()",,,0,1,1,Revenue,568,1328,196,0
+2003-12-10,,"New York / John F Kennedy (JFK/KJFK)","Kuwait / Kuwait (KWI/OKKK)",00:00:00,00:00:00,14:02:00,"Kuwait Airways (KU/KAC)"," ()",,,0,1,1,Revenue,1328,1538,424,0
+2003-12-11,,"Kuwait / Kuwait (KWI/OKKK)","Mumbai / Chhatrapati Shivaji (BOM/VABB)",00:00:00,00:00:00,03:58:00,"Kuwait Airways (KU/KAC)"," ()",,,0,1,1,Revenue,1538,375,424,0
+2003-12-30,,"Mumbai / Chhatrapati Shivaji (BOM/VABB)","Kuwait / Kuwait (KWI/OKKK)",00:00:00,00:00:00,03:58:00,"Kuwait Airways (KU/KAC)"," ()",,,0,1,1,Revenue,375,1538,424,0
+2003-12-31,,"Kuwait / Kuwait (KWI/OKKK)","New York / John F Kennedy (JFK/KJFK)",00:00:00,00:00:00,14:02:00,"Kuwait Airways (KU/KAC)"," ()",,,0,1,1,Revenue,1538,1328,424,0
+2003-12-31,,"New York / John F Kennedy (JFK/KJFK)","Cleveland / Hopkins (CLE/KCLE)",00:00:00,00:00:00,01:10:00,"Continental Airlines (CO/COA)"," ()",,,0,1,1,Revenue,1328,568,196,0
+2025-12-24,UA2421,"Chicago / O'Hare (ORD/KORD)","Newark / Liberty International (EWR/KEWR)",13:37:00,16:53:00,02:16:00,"United Airlines (UA/UAL)","Airbus A321neo (A21N)",N44501,20F,1,1,1,Nonrev,2205,851,808,2128
+2026-01-06,UA1146,"Newark / Liberty International (EWR/KEWR)","Chicago / O'Hare (ORD/KORD)",06:50:00,08:44:00,02:54:00,"United Airlines (UA/UAL)","Boeing 737 MAX 9 (B39M)",N77558,23A,1,1,1,Nonrev,851,2205,808,2124
+1998-11-23,,"Chennai / Chennai (MAA/VOMM)","Colombo / Bandaranaike (CMB/VCBI)",00:00:00,00:00:00,01:07:00,"SriLankan Airlines (UL/ALK)"," ()",,,0,1,1,Revenue,1737,577,51,0
+1998-12-02,,"Colombo / Bandaranaike (CMB/VCBI)","Chennai / Chennai (MAA/VOMM)",00:00:00,00:00:00,01:07:00,"SriLankan Airlines (UL/ALK)"," ()",,,0,1,1,Revenue,577,1737,51,0
+2024-11-27,UA83,"Delhi / Indira Gandhi (DEL/VIDP)","Newark / Liberty International (EWR/KEWR)",23:55:00,06:35:00,16:40:00,"United Airlines (UA/UAL)","Boeing 787-9 (B789)",N13954,1D,1,2,1,Revenue,689,851,808,2088
+2005-12-31,,"Mumbai / Chhatrapati Shivaji (BOM/VABB)","Paris / Charles de Gaulle (CDG/LFPG)",00:00:00,00:00:00,09:42:00,"Air France (AF/AFR)","Boeing 747-400 (B744)",,,0,1,1,Revenue,375,509,34,237
+2002-01-16,,"Mumbai / Chhatrapati Shivaji (BOM/VABB)","Moscow / Sheremetyevo (SVO/UUEE)",00:00:00,00:00:00,07:04:00,"Aeroflot (SU/AFL)"," ()",,,0,1,1,Revenue,375,2816,33,0
+2026-01-20,UA938,"Chicago / O'Hare (ORD/KORD)","London / Heathrow (LHR/EGLL)",21:05:00,11:15:00,07:10:00,"United Airlines (UA/UAL)","Boeing 767-300 (B763)",N675UA,18A,1,2,1,Nonrev,2205,1618,808,244
+2026-01-22,UA958,"London / Heathrow (LHR/EGLL)","Chicago / O'Hare (ORD/KORD)",07:40:00,11:00:00,10:20:00,"United Airlines (UA/UAL)","Boeing 767-300 (B763)",N666UA,15A,1,2,1,Nonrev,1618,2205,808,244
+2026-02-22,WN1085,"Chicago / Chicago Midway (MDW/KMDW)","Dallas / Dallas Love Fld (DAL/KDAL)",17:50:00,20:15:00,02:25:00,"Southwest Airlines (WN/SWA)","Boeing 737-800 (B738)",N8535S,6E,2,1,2,Revenue,1785,672,736,231
+2026-02-24,WN1327,"Dallas / Dallas Love Fld (DAL/KDAL)","Chicago / Chicago Midway (MDW/KMDW)",18:30:00,20:40:00,02:10:00,"Southwest Airlines (WN/SWA)","Boeing 737 MAX 8 (B38M)",N8808Q,6F,1,1,2,Revenue,672,1785,736,2123
+2026-03-05,WN1845,"Chicago / Chicago Midway (MDW/KMDW)","Dallas / Dallas Love Fld (DAL/KDAL)",07:25:00,09:55:00,02:30:00,"Southwest Airlines (WN/SWA)","Boeing 737-800 (B738)",N8560Z,7A,1,1,1,Revenue,1785,672,736,231
+2026-03-05,WN1561,"Dallas / Dallas Love Fld (DAL/KDAL)","Chicago / Chicago Midway (MDW/KMDW)",19:50:00,22:00:00,02:10:00,"Southwest Airlines (WN/SWA)","Boeing 737-700 (B737)",N7868K,8D,3,1,1,Revenue,672,1785,736,230
+2026-05-11,WN63,"Chicago / Chicago Midway (MDW/KMDW)","Dallas / Dallas Love Fld (DAL/KDAL)",18:55:00,21:20:00,02:25:00,"Southwest Airlines (WN/SWA)","Boeing 737-700 (B737)",N201LV,3E,2,1,2,Revenue,1785,672,736,230
+2026-05-14,WN210,"Dallas / Dallas Love Fld (DAL/KDAL)","Chicago / Chicago Midway (MDW/KMDW)",19:05:00,21:15:00,02:10:00,"Southwest Airlines (WN/SWA)","Boeing 737-800 (B738)",N8802Q,3B,2,1,2,Revenue,672,1785,736,231
+2006-12-21,,"Cleveland / Hopkins (CLE/KCLE)","San Francisco / San Francisco International (SFO/KSFO)",00:00:00,00:00:00,04:56:00,"Continental Airlines (CO/COA)"," ()",,,0,1,1,Revenue,568,2644,196,0
+2006-12-30,,"San Francisco / San Francisco International (SFO/KSFO)","Cleveland / Hopkins (CLE/KCLE)",00:00:00,00:00:00,04:56:00,"Continental Airlines (CO/COA)"," ()",,,0,1,1,Revenue,2644,568,196,0
+2014-08-04,,"Newark / Liberty International (EWR/KEWR)","Edinburgh / Edinburgh (EDI/EGPH)",00:00:00,00:00:00,07:20:00,"United Airlines (UA/UAL)","Boeing 757-200 (B752)",,,0,1,1,Revenue,851,785,808,241
+2014-08-13,,"Edinburgh / Edinburgh (EDI/EGPH)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,07:20:00,"United Airlines (UA/UAL)","Boeing 757-200 (B752)",,,0,1,1,Revenue,785,851,808,241
+2026-06-17,WN2661,"Chicago / Chicago Midway (MDW/KMDW)","Dallas / Dallas Love Fld (DAL/KDAL)",05:05:00,07:20:00,02:15:00,"Southwest Airlines (WN/SWA)","Boeing 737 MAX 8 (B38M)",N8707P,14F,1,1,1,Nonrev,1785,672,736,2123
+2026-06-17,WN1359,"Dallas / Dallas Love Fld (DAL/KDAL)","Chicago / Chicago Midway (MDW/KMDW)",21:55:00,00:05:00,02:10:00,"Southwest Airlines (WN/SWA)","Boeing 737-800 (B738)",N8519R,6C,3,1,1,Revenue,672,1785,736,231
+2026-06-21,WN973,"Chicago / Chicago Midway (MDW/KMDW)","Atlanta / Hartsfield-Jackson (ATL/KATL)",07:00:00,09:50:00,01:50:00,"Southwest Airlines (WN/SWA)","Boeing 737-800 (B738)",N8306H,7D,3,1,1,Revenue,1785,179,736,231
+2026-06-21,WN232,"Atlanta / Hartsfield-Jackson (ATL/KATL)","Chicago / Chicago Midway (MDW/KMDW)",18:45:00,19:40:00,01:55:00,"Southwest Airlines (WN/SWA)","Boeing 737-700 (B737)",N208WN,7A,1,1,1,Revenue,179,1785,736,230
+2026-06-22,UA1939,"Chicago / O'Hare (ORD/KORD)","Newark / Liberty International (EWR/KEWR)",05:00:00,08:13:00,02:13:00,"United Airlines (UA/UAL)","Boeing 737 MAX 9 (B39M)",N17454,11F,1,1,1,Nonrev,2205,851,808,2124
+2026-06-23,UA2824,"Philadelphia / Philadelphia (PHL/KPHL)","Chicago / O'Hare (ORD/KORD)",20:41:00,22:14:00,02:33:00,"United Airlines (UA/UAL)","Boeing 737-700 (B737)",N17719,8F,1,1,1,Nonrev,2311,2205,808,230
+2026-07-03,WN4407,"Chicago / Chicago Midway (MDW/KMDW)","Kansas City / Kansas City (MCI/KMCI)",14:10:00,15:35:00,01:25:00,"Southwest Airlines (WN/SWA)","Boeing 737 MAX 8 (B38M)",N8729H,6D,3,1,1,Revenue,1785,1765,736,2123
+2026-07-04,WN1979,"Kansas City / Kansas City (MCI/KMCI)","Chicago / Chicago Midway (MDW/KMDW)",10:15:00,11:45:00,01:30:00,"Southwest Airlines (WN/SWA)","Boeing 737 MAX 8 (B38M)",N8804L,6D,3,1,1,Revenue,1765,1785,736,2123
+2026-08-29,WN4797,"Chicago / Chicago Midway (MDW/KMDW)","New York / La Guardia (LGA/KLGA)",12:10:00,15:20:00,02:10:00,"Southwest Airlines (WN/SWA)","Boeing 737 MAX 8 (B38M)",N8990Q,1E,2,1,1,Revenue,1785,1605,736,2123
+2026-09-02,AA3027,"Newark / Liberty International (EWR/KEWR)","Chicago / O'Hare (ORD/KORD)",06:50:00,08:36:00,02:46:00,"American Airlines (AA/AAL)","Boeing 737 MAX 8 (B38M)",N357TY,9A,1,1,1,Nonrev,851,2205,4,2123
+2026-09-12,WN2687,"Chicago / Chicago Midway (MDW/KMDW)","Baltimore / Washington (BWI/KBWI)",05:55:00,08:40:00,01:45:00,"Southwest Airlines (WN/SWA)","Boeing 737 MAX 8 (B38M)",N8858K,26D,3,1,1,Nonrev,1785,449,736,2123
+2026-09-13,WN1387,"Baltimore / Washington (BWI/KBWI)","Dallas / Dallas Love Fld (DAL/KDAL)",14:05:00,16:10:00,03:05:00,"Southwest Airlines (WN/SWA)","Boeing 737 MAX 8 (B38M)",N8768Q,3E,2,1,2,Revenue,449,672,736,2123
+2026-09-17,WN668,"Dallas / Dallas Love Fld (DAL/KDAL)","Chicago / Chicago Midway (MDW/KMDW)",21:10:00,23:25:00,02:15:00,"Southwest Airlines (WN/SWA)","Boeing 737 MAX 8 (B38M)",N8957Q,1F,1,1,2,Revenue,672,1785,736,2123
+2011-07-05,,"Delhi / Indira Gandhi (DEL/VIDP)","Bangalore / Bengaluru (BLR/VOBL)",00:00:00,00:00:00,02:33:00,"Air India (AI/AIC)"," ()",,,0,1,1,Revenue,689,4846,43,0
+2011-07-10,,"Bangalore / Bengaluru (BLR/VOBL)","Delhi / Indira Gandhi (DEL/VIDP)",00:00:00,00:00:00,02:33:00,"Air India (AI/AIC)"," ()",,,0,1,1,Revenue,4846,689,43,0
