@@ -39,16 +39,16 @@ FLIGHT_API_URL=http://localhost:8000
 ```
 
 ### 4. Load your flight data
-Export your flight diary CSV from Flightradar24, place it in the `csv/` folder, update `CSV_PATH` in `load_flights_to_neon.py`, then run:
+Export your flight diary CSV from Flightradar24, place it in the `csv/` folder, update `CSV_PATH` in `src/load_flights_to_neon.py`, then run:
 ```bash
-uv run load_flights_to_neon.py
+uv run src/load_flights_to_neon.py
 ```
 
 Re-running with a newer export will upsert — new flights are inserted, existing ones are updated.
 
 ### 5. Run the API locally
 ```bash
-uv run uvicorn api.main:app --reload
+uv run uvicorn src.api.main:app --reload
 ```
 
 ### 6. Run the React app
@@ -111,29 +111,30 @@ Example: `GET https://flight-data-26kb.onrender.com/flights?airline=United&fligh
 3. Set the following:
    - **Runtime:** Python
    - **Build command:** `pip install uv && uv sync --frozen`
-   - **Start command:** `uv run uvicorn api.main:app --host 0.0.0.0 --port $PORT`
+   - **Start command:** `uv run uvicorn src.api.main:app --host 0.0.0.0 --port $PORT`
 4. Under **Environment**, add `NEON_DATABASE_URL` with your connection string
 
 ## Project structure
 ```
 fr24/
-├── api/
-│   ├── main.py             # FastAPI app + middleware
-│   ├── db.py               # DB connection, constants, helpers
-│   ├── models.py           # Pydantic models
-│   └── routes/
-│       ├── flights.py      # GET /flights, GET /flights/{id}
-│       ├── stats.py        # GET /stats
-│       ├── aircraft.py     # GET /aircraft
-│       ├── airports.py     # GET /airports
-│       └── registrations.py# GET /registrations/{reg}
+├── src/
+│   ├── api/
+│   │   ├── main.py         # FastAPI app + middleware
+│   │   ├── db.py           # DB connection, constants, helpers
+│   │   ├── models.py       # Pydantic models
+│   │   └── routes/
+│   │       ├── flights.py  # GET /flights, GET /flights/{id}
+│   │       ├── stats.py    # GET /stats
+│   │       ├── aircraft.py # GET /aircraft
+│   │       ├── airports.py # GET /airports
+│   │       └── registrations.py # GET /registrations/{reg}
+│   ├── registration_lookup.py  # External aircraft metadata
+│   └── load_flights_to_neon.py # CSV → Neon PostgreSQL loader
 ├── frontend/
 │   ├── src/App.jsx         # React dashboard and views
 │   ├── src/api.js          # FastAPI client
 │   └── src/styles.css      # Dashboard styling
-├── registration_lookup.py  # Shared aircraft registration lookup
-├── load_flights_to_neon.py # CSV → Neon PostgreSQL loader
-├── Procfile                # API start command for Render / Railway
+├── Procfile                # API start command for Render
 ├── pyproject.toml          # Project metadata & dependencies (uv)
 ├── uv.lock                 # Locked dependency versions (uv)
 ├── csv/                    # Flight diary exports (gitignored)

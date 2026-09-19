@@ -28,6 +28,6 @@ app.include_router(aircraft.router)
 app.include_router(airports.router)
 app.include_router(registrations.router)
 
-frontend_dist = Path(__file__).resolve().parent.parent / "frontend" / "dist"
+frontend_dist = Path(__file__).resolve().parent.parent.parent / "frontend" / "dist"
 if frontend_dist.is_dir():
     app.mount("/", StaticFiles(directory=frontend_dist, html=True), name="frontend")

@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from registration_lookup import fetch_registration
+from ...registration_lookup import fetch_registration
 from ..db import get_conn, row_to_flight
 from ..models import Flight, RegistrationDetail, RegistrationMeta
 

@@ -1,0 +1,1 @@
+"""Flight Diary Python application package."""
