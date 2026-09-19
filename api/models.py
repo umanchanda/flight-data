@@ -43,6 +43,12 @@ class AirportSummary(BaseModel):
     name: str
     city: str
     country: str
+    state_region: str = ""
+    icao: str = ""
+    elevation: float | None = None
+    timezone: str = ""
+    lat: float | None = None
+    lon: float | None = None
     departures: int
     arrivals: int
     total_visits: int

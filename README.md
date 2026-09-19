@@ -1,6 +1,6 @@
 # fr24 Flight Diary
 
-A Streamlit dashboard for visualizing personal flight history exported from [Flightradar24](https://www.flightradar24.com/). Link is available [here](https://flight-data-uman230.streamlit.app/)
+A React dashboard for visualizing personal flight history exported from [Flightradar24](https://www.flightradar24.com/), backed by FastAPI and Neon PostgreSQL.
 
 ## Features
 
@@ -46,24 +46,46 @@ uv run load_flights_to_neon.py
 
 Re-running with a newer export will upsert — new flights are inserted, existing ones are updated.
 
-### 5. Run the Streamlit app
-```bash
-uv run streamlit run streamlit/Home.py
-```
-
-The Streamlit app reads flight data through the API. In production, set
-`FLIGHT_API_URL` to the deployed API URL and keep `NEON_DATABASE_URL` configured
-only on the API service.
-
-For Streamlit Cloud, add this under the app's **Settings → Secrets**:
-```toml
-FLIGHT_API_URL = "https://flight-data-26kb.onrender.com"
-```
-
-### 6. Run the API locally
+### 5. Run the API locally
 ```bash
 uv run uvicorn api.main:app --reload
 ```
+
+### 6. Run the React app
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+The React app reads flight data through the API. For a local API, no extra
+configuration is needed. For a deployed API, create `frontend/.env` with:
+```
+FLIGHT_API_URL=https://your-api.example.com
+```
+
+Create a production bundle with `npm run build` and serve `frontend/dist` with
+your preferred static hosting provider.
+
+### 7. Deploy the React frontend to Heroku
+
+The API is already deployed at `https://flight-data-26kb.onrender.com`. Deploy
+the React frontend as a separate Heroku app. The Node buildpack builds
+`frontend/dist`, and the Heroku dyno serves those static files.
+
+```bash
+heroku login
+heroku create your-flight-diary
+heroku config:set FLIGHT_API_URL="https://flight-data-26kb.onrender.com"
+git subtree push --prefix frontend heroku main
+heroku open
+```
+
+`FLIGHT_API_URL` must be configured before the build because Vite embeds
+it into the frontend bundle. The Render API already allows cross-origin `GET`
+requests from the Heroku app. The frontend's [Procfile](frontend/Procfile)
+starts the static server, while the root [Procfile](Procfile) remains the
+FastAPI command used by Render.
 
 Interactive docs available at `http://localhost:8000/docs`.
 
@@ -105,12 +127,10 @@ fr24/
 │       ├── aircraft.py     # GET /aircraft
 │       ├── airports.py     # GET /airports
 │       └── registrations.py# GET /registrations/{reg}
-├── streamlit/
-│   ├── Home.py             # Flights page (main entry point)
-│   └── pages/
-│       ├── 2_Aircraft.py   # Aircraft info & stats
-│       ├── 3_Airports.py   # Airport map & stats
-│       └── 4_Registrations.py # Registration lookup
+├── frontend/
+│   ├── src/App.jsx         # React dashboard and views
+│   ├── src/api.js          # FastAPI client
+│   └── src/styles.css      # Dashboard styling
 ├── registration_lookup.py  # Shared aircraft registration lookup
 ├── load_flights_to_neon.py # CSV → Neon PostgreSQL loader
 ├── Procfile                # API start command for Render / Railway
