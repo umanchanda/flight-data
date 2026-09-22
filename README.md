@@ -28,7 +28,7 @@ cd fr24
 
 ### 2. Install dependencies
 ```bash
-uv sync
+pip install -r requirements.txt
 ```
 
 ### 3. Configure environment
@@ -41,14 +41,14 @@ FLIGHT_API_URL=http://localhost:8000
 ### 4. Load your flight data
 Export your flight diary CSV from Flightradar24, place it in the `csv/` folder, update `CSV_PATH` in `src/load_flights_to_neon.py`, then run:
 ```bash
-uv run src/load_flights_to_neon.py
+python src/load_flights_to_neon.py
 ```
 
 Re-running with a newer export will upsert — new flights are inserted, existing ones are updated.
 
 ### 5. Run the API locally
 ```bash
-uv run uvicorn src.api.main:app --reload
+uvicorn src.api.main:app --reload
 ```
 
 ### 6. Run the React app
@@ -58,34 +58,10 @@ npm install
 npm run dev
 ```
 
-The React app reads flight data through the API. For a local API, no extra
-configuration is needed. For a deployed API, create `frontend/.env` with:
-```
-FLIGHT_API_URL=https://your-api.example.com
-```
-
-Create a production bundle with `npm run build` and serve `frontend/dist` with
-your preferred static hosting provider.
-
-### 7. Deploy the React frontend to Heroku
-
-The API is already deployed at `https://flight-data-26kb.onrender.com`. Deploy
-the React frontend as a separate Heroku app. The Node buildpack builds
-`frontend/dist`, and the Heroku dyno serves those static files.
-
-```bash
-heroku login
-heroku create your-flight-diary
-heroku config:set FLIGHT_API_URL="https://flight-data-26kb.onrender.com"
-git subtree push --prefix frontend heroku main
-heroku open
-```
-
-`FLIGHT_API_URL` must be configured before the build because Vite embeds
-it into the frontend bundle. The Render API already allows cross-origin `GET`
-requests from the Heroku app. The frontend's [Procfile](frontend/Procfile)
-starts the static server, while the root [Procfile](Procfile) remains the
-FastAPI command used by Render.
+In local development the API and frontend run as separate processes, so the
+frontend talks to the API at `http://localhost:8000` by default. No extra
+configuration is needed unless you want to point it at a different API URL,
+in which case set `FLIGHT_API_URL` in `frontend/.env` before building.
 
 Interactive docs available at `http://localhost:8000/docs`.
 
@@ -99,20 +75,31 @@ Interactive docs available at `http://localhost:8000/docs`.
 | `GET` | `/aircraft` | All aircraft types with flight counts and hours |
 | `GET` | `/airports` | All airports with departure/arrival counts |
 
-The API is deployed at **https://flight-data-26kb.onrender.com**. Interactive docs at [https://flight-data-26kb.onrender.com/docs](https://flight-data-26kb.onrender.com/docs).
+The app is deployed at **https://flight-data-26kb.onrender.com**. Interactive docs at [https://flight-data-26kb.onrender.com/docs](https://flight-data-26kb.onrender.com/docs).
 
 Example: `GET https://flight-data-26kb.onrender.com/flights?airline=United&flight_class=business&date_from=2024-01-01`
 
-## Deploying the API
+## Deploying to Render
 
-### Render (free tier)
+The API and React frontend deploy together as a single Render web service.
+FastAPI serves the JSON API and also serves the built `frontend/dist` files,
+so there's only one URL and no cross-origin configuration to manage.
+
+The repo includes a [render.yaml](render.yaml) Blueprint with the required
+settings, so you can deploy by connecting the repo and syncing the Blueprint:
+
 1. Push this repo to GitHub
-2. Go to [render.com](https://render.com) → New → Web Service → connect your repo
-3. Set the following:
+2. Go to [render.com](https://render.com) → New → Blueprint → connect your repo
+3. Render reads `render.yaml` and creates the web service automatically
+4. Under **Environment**, set `NEON_DATABASE_URL` to your Neon connection string
+
+To configure the service manually instead:
    - **Runtime:** Python
-   - **Build command:** `pip install uv && uv sync --frozen`
-   - **Start command:** `uv run uvicorn src.api.main:app --host 0.0.0.0 --port $PORT`
-4. Under **Environment**, add `NEON_DATABASE_URL` with your connection string
+   - **Build command:** `pip install -r requirements.txt && cd frontend && npm install && npm run build`
+   - **Start command:** `uvicorn src.api.main:app --host 0.0.0.0 --port $PORT`
+
+Render's Python runtime includes Node.js, so the same build step compiles the
+React app before the API starts.
 
 ## Project structure
 ```
@@ -134,9 +121,8 @@ fr24/
 │   ├── src/App.jsx         # React dashboard and views
 │   ├── src/api.js          # FastAPI client
 │   └── src/styles.css      # Dashboard styling
-├── Procfile                # API start command for Render
-├── pyproject.toml          # Project metadata & dependencies (uv)
-├── uv.lock                 # Locked dependency versions (uv)
+├── render.yaml             # Single-service Render Blueprint
+├── requirements.txt        # Python dependencies (pip)
 ├── csv/                    # Flight diary exports (gitignored)
 └── .env                    # Database credentials (gitignored)
 ```
