@@ -92,8 +92,8 @@ function FlightsPage({ flights }) {
       <MultiSelect label="Year" options={years} selected={filters.years} onChange={(years) => updateFilters({ ...filters, years })} />
       <MultiSelect label="Airline" options={airlines} selected={filters.airlines} onChange={(airlines) => updateFilters({ ...filters, airlines })} />
       <MultiSelect label="Aircraft type" options={aircraftTypes} selected={filters.aircraft} onChange={(aircraft) => updateFilters({ ...filters, aircraft })} />
-      <label>Class<select value={filters.class} onChange={(event) => updateFilters({ ...filters, class: event.target.value })}><option value="">All classes</option>{classes.map((option) => <option key={option}>{option}</option>)}</select></label>
-      <label>Ticket type<select value={filters.ticket} onChange={(event) => updateFilters({ ...filters, ticket: event.target.value })}><option value="">All tickets</option><option>Revenue</option><option>Nonrev</option></select></label>
+      <RadioGroup label="Class" name="class-filter" value={filters.class} options={classes} onChange={(value) => updateFilters({ ...filters, class: value })} />
+      <RadioGroup label="Ticket type" name="ticket-filter" value={filters.ticket} options={["Revenue", "Nonrev"]} onChange={(value) => updateFilters({ ...filters, ticket: value })} />
     </div></section>
     <section className="section-block"><div className="section-title"><h2>Highlights</h2><span>Based on current filters</span></div><div className="split-grid three-col"><SimpleList title="Top 3 aircraft types" items={topAircraftData} /><SimpleList title="Top 5 airports" items={topAirportData} /><SimpleList title="Top 5 routes" items={topRouteData} /></div></section>
     <section className="section-block"><div className="section-title"><h2>Flight records</h2><span>Newest first</span></div><FlightTable flights={pageFlights} /><Pagination page={currentPage} pageCount={pageCount} onChange={setPageNum} /></section>
@@ -123,6 +123,13 @@ function RepeatAircraftSection({ flights }) {
 function MultiSelect({ label, options, selected, onChange }) {
   const toggle = (option) => onChange(selected.includes(option) ? selected.filter((value) => value !== option) : [...selected, option]);
   return <details className="multiselect"><summary>{label}{selected.length > 0 && ` · ${selected.length}`}</summary><div className="multiselect-panel">{options.map((option) => <label key={option}><input type="checkbox" checked={selected.includes(option)} onChange={() => toggle(option)} />{option}</label>)}{options.length === 0 && <p className="muted">No options available.</p>}{selected.length > 0 && <button type="button" className="clear-button" onClick={() => onChange([])}>Clear</button>}</div></details>;
+}
+
+function RadioGroup({ label, name, value, options, onChange }) {
+  return <div className="radio-group"><span className="radio-group-label">{label}</span><div className="radio-group-options">
+    <label><input type="radio" name={name} checked={value === ""} onChange={() => onChange("")} />All</label>
+    {options.map((option) => <label key={option}><input type="radio" name={name} checked={value === option} onChange={() => onChange(option)} />{option}</label>)}
+  </div></div>;
 }
 
 function aggregate(items, keyFn, valueKey, valueFn = () => 1) { const result = {}; items.forEach((item) => { const key = keyFn(item); if (key) result[key] = (result[key] || 0) + valueFn(item); }); return Object.entries(result).map(([name, value]) => ({ name, [valueKey]: Number(value.toFixed?.(1) || value) })).sort((a, b) => b[valueKey] - a[valueKey]); }
