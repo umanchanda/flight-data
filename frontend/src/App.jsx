@@ -58,29 +58,71 @@ function PageIntro({ kicker, title, children }) { return <div className="page-in
 function Metric({ label, value, detail }) { return <div className="metric"><span>{label}</span><strong>{value}</strong>{detail && <small>{detail}</small>}</div>; }
 
 function FlightsPage({ flights }) {
-  const [filters, setFilters] = useState({ year: "", airline: "", class: "", ticket: "" });
+  const [filters, setFilters] = useState({ years: [], airlines: [], aircraft: [], class: "", ticket: "" });
+  const [pageNum, setPageNum] = useState(1);
+  const updateFilters = (next) => { setFilters(next); setPageNum(1); };
   const years = [...new Set(flights.map((flight) => dateValue(flight)?.getFullYear()).filter(Boolean))].sort((a, b) => b - a);
   const airlines = [...new Set(flights.map((flight) => flight.airline).filter(Boolean))].sort();
+  const aircraftTypes = [...new Set(flights.map((flight) => flight.aircraft).filter(Boolean))].sort();
   const classes = [...new Set(flights.map((flight) => flight.flight_class).filter(Boolean))].sort();
   const filtered = flights.filter((flight) => {
-    const yearMatch = !filters.year || dateValue(flight)?.getFullYear() === Number(filters.year);
-    const airlineMatch = !filters.airline || flight.airline === filters.airline;
+    const yearMatch = !filters.years.length || filters.years.includes(dateValue(flight)?.getFullYear());
+    const airlineMatch = !filters.airlines.length || filters.airlines.includes(flight.airline);
+    const aircraftMatch = !filters.aircraft.length || filters.aircraft.includes(flight.aircraft);
     const classMatch = !filters.class || flight.flight_class === filters.class;
     const ticketMatch = !filters.ticket || (filters.ticket === "Nonrev" ? /nonrev/i.test(flight.note || "") : !/nonrev/i.test(flight.note || ""));
-    return yearMatch && airlineMatch && classMatch && ticketMatch;
+    return yearMatch && airlineMatch && aircraftMatch && classMatch && ticketMatch;
   });
-  const yearsData = aggregate(filtered, (flight) => dateValue(flight)?.getFullYear(), "flights");
+  const PAGE_SIZE = 50;
+  const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  const currentPage = Math.min(pageNum, pageCount);
+  const pageFlights = filtered.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
+  const yearsData = aggregate(filtered, (flight) => dateValue(flight)?.getFullYear(), "flights").sort((a, b) => Number(a.name) - Number(b.name));
   const airlineData = aggregate(filtered, (flight) => flight.airline, "flights").slice(0, 8);
   const routeData = aggregate(filtered, (flight) => `${flight.from_airport} → ${flight.to_airport}`, "flights").slice(0, 8);
   const hoursData = aggregate(filtered, (flight) => flight.airline, "hours", toHours);
+  const topAircraftData = aggregate(filtered, (flight) => flight.aircraft, "flights").slice(0, 3);
+  const topAirlineData = aggregate(filtered, (flight) => flight.airline, "flights").slice(0, 3);
+  const topRouteData = aggregate(filtered, (flight) => `${shortAirport(flight.from_airport)} → ${shortAirport(flight.to_airport)}`, "flights").slice(0, 5);
   const totalHours = filtered.reduce((sum, flight) => sum + toHours(flight), 0);
   return <>
     <PageIntro kicker="Your flight log" title="Flights"><span className="record-count">{filtered.length} records</span></PageIntro>
     <section className="metrics"><Metric label="Total flights" value={filtered.length} /><Metric label="Hours flown" value={`${totalHours.toFixed(1)} h`} /><Metric label="Airlines" value={new Set(filtered.map((f) => f.airline)).size} /><Metric label="Airports visited" value={new Set(filtered.flatMap((f) => [f.from_airport, f.to_airport])).size} /></section>
-    <section className="filter-panel"><div className="filter-heading"><span>Filter your log</span><button className="clear-button" onClick={() => setFilters({ year: "", airline: "", class: "", ticket: "" })}>Clear filters</button></div><div className="filters">{[["year", "Year", years], ["airline", "Airline", airlines], ["class", "Class", classes]].map(([key, label, options]) => <label key={key}>{label}<select value={filters[key]} onChange={(event) => setFilters({ ...filters, [key]: event.target.value })}><option value="">All {label.toLowerCase()}s</option>{options.map((option) => <option key={option}>{option}</option>)}</select></label>)}<label>Ticket type<select value={filters.ticket} onChange={(event) => setFilters({ ...filters, ticket: event.target.value })}><option value="">All tickets</option><option>Revenue</option><option>Nonrev</option></select></label></div></section>
-    <section className="section-block"><div className="section-title"><h2>Flight records</h2><span>Newest first</span></div><FlightTable flights={filtered} /></section>
+    <section className="filter-panel"><div className="filter-heading"><span>Filter your log</span><button className="clear-button" onClick={() => updateFilters({ years: [], airlines: [], aircraft: [], class: "", ticket: "" })}>Clear filters</button></div><div className="filters">
+      <MultiSelect label="Year" options={years} selected={filters.years} onChange={(years) => updateFilters({ ...filters, years })} />
+      <MultiSelect label="Airline" options={airlines} selected={filters.airlines} onChange={(airlines) => updateFilters({ ...filters, airlines })} />
+      <MultiSelect label="Aircraft type" options={aircraftTypes} selected={filters.aircraft} onChange={(aircraft) => updateFilters({ ...filters, aircraft })} />
+      <label>Class<select value={filters.class} onChange={(event) => updateFilters({ ...filters, class: event.target.value })}><option value="">All classes</option>{classes.map((option) => <option key={option}>{option}</option>)}</select></label>
+      <label>Ticket type<select value={filters.ticket} onChange={(event) => updateFilters({ ...filters, ticket: event.target.value })}><option value="">All tickets</option><option>Revenue</option><option>Nonrev</option></select></label>
+    </div></section>
+    <section className="section-block"><div className="section-title"><h2>Highlights</h2><span>Based on current filters</span></div><div className="split-grid three-col"><SimpleList title="Top 3 aircraft types" items={topAircraftData} /><SimpleList title="Top 3 airlines" items={topAirlineData} /><SimpleList title="Top 5 routes" items={topRouteData} /></div></section>
+    <section className="section-block"><div className="section-title"><h2>Flight records</h2><span>Newest first</span></div><FlightTable flights={pageFlights} /><Pagination page={currentPage} pageCount={pageCount} onChange={setPageNum} /></section>
     <div className="chart-grid"><Chart title="Flights by airline" data={airlineData} /><Chart title="Flights per year" data={yearsData} /><Chart title="Top routes" data={routeData} /><Chart title="Hours by airline" data={hoursData} dataKey="hours" /></div>
+    <RepeatAircraftSection flights={filtered} />
   </>;
+}
+
+function Pagination({ page, pageCount, onChange }) {
+  if (pageCount <= 1) return null;
+  return <div className="pagination">
+    <button type="button" disabled={page <= 1} onClick={() => onChange(page - 1)}>← Previous</button>
+    <span>Page {page} of {pageCount}</span>
+    <button type="button" disabled={page >= pageCount} onClick={() => onChange(page + 1)}>Next →</button>
+  </div>;
+}
+
+function RepeatAircraftSection({ flights }) {
+  const repeats = aggregate(flights.filter((flight) => flight.registration), (flight) => flight.registration, "flights").filter((row) => row.flights > 1);
+  if (!repeats.length) return null;
+  return <section className="section-block">
+    <div className="section-title"><h2>🔁 Repeat aircraft</h2><span>{repeats.length} registrations flown more than once</span></div>
+    <div className="repeat-list">{repeats.map((row) => <details className="repeat-item" key={row.name}><summary><strong className="mono">{row.name}</strong><span className="tag">{row.flights} flights</span></summary><FlightTable flights={flights.filter((flight) => flight.registration === row.name).sort((a, b) => (b.date || "").localeCompare(a.date || ""))} /></details>)}</div>
+  </section>;
+}
+
+function MultiSelect({ label, options, selected, onChange }) {
+  const toggle = (option) => onChange(selected.includes(option) ? selected.filter((value) => value !== option) : [...selected, option]);
+  return <details className="multiselect"><summary>{label}{selected.length > 0 && ` · ${selected.length}`}</summary><div className="multiselect-panel">{options.map((option) => <label key={option}><input type="checkbox" checked={selected.includes(option)} onChange={() => toggle(option)} />{option}</label>)}{options.length === 0 && <p className="muted">No options available.</p>}{selected.length > 0 && <button type="button" className="clear-button" onClick={() => onChange([])}>Clear</button>}</div></details>;
 }
 
 function aggregate(items, keyFn, valueKey, valueFn = () => 1) { const result = {}; items.forEach((item) => { const key = keyFn(item); if (key) result[key] = (result[key] || 0) + valueFn(item); }); return Object.entries(result).map(([name, value]) => ({ name, [valueKey]: Number(value.toFixed?.(1) || value) })).sort((a, b) => b[valueKey] - a[valueKey]); }
