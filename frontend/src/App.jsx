@@ -82,7 +82,7 @@ function FlightsPage({ flights }) {
   const routeData = aggregate(filtered, (flight) => `${flight.from_airport} → ${flight.to_airport}`, "flights").slice(0, 8);
   const hoursData = aggregate(filtered, (flight) => flight.airline, "hours", toHours);
   const topAircraftData = aggregate(filtered, (flight) => flight.aircraft, "flights").slice(0, 3);
-  const topAirlineData = aggregate(filtered, (flight) => flight.airline, "flights").slice(0, 3);
+  const topAirportData = aggregate(filtered.flatMap((flight) => [shortAirport(flight.from_airport), shortAirport(flight.to_airport)]), (airport) => airport, "flights").slice(0, 3);
   const topRouteData = aggregate(filtered, (flight) => `${shortAirport(flight.from_airport)} → ${shortAirport(flight.to_airport)}`, "flights").slice(0, 5);
   const totalHours = filtered.reduce((sum, flight) => sum + toHours(flight), 0);
   return <>
@@ -95,7 +95,7 @@ function FlightsPage({ flights }) {
       <label>Class<select value={filters.class} onChange={(event) => updateFilters({ ...filters, class: event.target.value })}><option value="">All classes</option>{classes.map((option) => <option key={option}>{option}</option>)}</select></label>
       <label>Ticket type<select value={filters.ticket} onChange={(event) => updateFilters({ ...filters, ticket: event.target.value })}><option value="">All tickets</option><option>Revenue</option><option>Nonrev</option></select></label>
     </div></section>
-    <section className="section-block"><div className="section-title"><h2>Highlights</h2><span>Based on current filters</span></div><div className="split-grid three-col"><SimpleList title="Top 3 aircraft types" items={topAircraftData} /><SimpleList title="Top 3 airlines" items={topAirlineData} /><SimpleList title="Top 5 routes" items={topRouteData} /></div></section>
+    <section className="section-block"><div className="section-title"><h2>Highlights</h2><span>Based on current filters</span></div><div className="split-grid three-col"><SimpleList title="Top 3 aircraft types" items={topAircraftData} /><SimpleList title="Top 3 airports" items={topAirportData} /><SimpleList title="Top 5 routes" items={topRouteData} /></div></section>
     <section className="section-block"><div className="section-title"><h2>Flight records</h2><span>Newest first</span></div><FlightTable flights={pageFlights} /><Pagination page={currentPage} pageCount={pageCount} onChange={setPageNum} /></section>
     <div className="chart-grid"><Chart title="Flights by airline" data={airlineData} /><Chart title="Flights per year" data={yearsData} /><Chart title="Top routes" data={routeData} /><Chart title="Hours by airline" data={hoursData} dataKey="hours" /></div>
     <RepeatAircraftSection flights={filtered} />
