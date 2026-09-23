@@ -139,8 +139,8 @@ Date,"Flight number",From,To,"Dep time","Arr time",Duration,Airline,Aircraft,Reg
 2023-02-26,,"Dallas / Dallas Love Fld (DAL/KDAL)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,01:58:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Revenue,672,1785,736,0
 2023-02-06,,"New York / La Guardia (LGA/KLGA)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,01:49:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Nonrev,1605,1785,736,0
 2023-02-03,UA2177,"Chicago / O'Hare (ORD/KORD)","Newark / Liberty International (EWR/KEWR)",12:47:00,16:04:00,02:17:00,"United Airlines (UA/UAL)","Boeing 737-800 (B738)",N33266,,0,1,1,Revenue,2205,851,808,231
-2022-10-22,UA224,"Chicago / O'Hare (ORD/KORD)","Newark / Liberty International (EWR/KEWR)",13:05:00,16:18:00,01:48:00,"United Airlines (UA/UAL)"," ()",N78511,,0,1,1,Revenue,2205,851,808,0
-2022-10-26,UA1234,"Newark / Liberty International (EWR/KEWR)","Chicago / O'Hare (ORD/KORD)",20:17:00,21:18:00,01:48:00,"United Airlines (UA/UAL)"," ()",N823UA,,0,1,1,Revenue,851,2205,808,0
+2022-10-22,UA224,"Chicago / O'Hare (ORD/KORD)","Newark / Liberty International (EWR/KEWR)",13:05:00,16:18:00,01:48:00,"United Airlines (UA/UAL)","Boeing 737-800 (B738)",N78511,,0,1,1,Revenue,2205,851,808,231
+2022-10-26,UA1234,"Newark / Liberty International (EWR/KEWR)","Chicago / O'Hare (ORD/KORD)",20:17:00,21:18:00,01:48:00,"United Airlines (UA/UAL)","Airbus A319 (A319)",N823UA,,0,1,1,Revenue,851,2205,808,26
 2023-11-19,,"Delhi / Indira Gandhi (DEL/VIDP)","Pune / Lohegaon (PNQ/VAPO)",00:00:00,00:00:00,01:48:00,"Vistara (UK/VTI)"," ()",,,0,1,1,Revenue,689,2367,2079,0
 2023-11-24,,"Pune / Lohegaon (PNQ/VAPO)","Delhi / Indira Gandhi (DEL/VIDP)",00:00:00,00:00:00,01:48:00,"Vistara (UK/VTI)"," ()",,,0,1,1,Revenue,2367,689,2079,0
 2023-09-25,,"Chicago / Chicago Midway (MDW/KMDW)","Dallas / Dallas Love Fld (DAL/KDAL)",00:00:00,00:00:00,01:58:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,2,Revenue,1785,672,736,0
@@ -170,7 +170,7 @@ Date,"Flight number",From,To,"Dep time","Arr time",Duration,Airline,Aircraft,Reg
 2015-12-25,,"Newark / Liberty International (EWR/KEWR)","San Francisco / San Francisco International (SFO/KSFO)",00:00:00,00:00:00,05:48:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,851,2644,808,0
 2015-12-31,,"San Francisco / San Francisco International (SFO/KSFO)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,05:48:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,2644,851,808,0
 2022-10-31,WN2422,"Richmond / Richmond Byrd Fld (RIC/KRIC)","Chicago / Chicago Midway (MDW/KMDW)",00:14:00,00:53:00,01:53:00,"Southwest Airlines (WN/SWA)","Boeing 737-700 (B737)",N266WN,,0,1,1,Nonrev,2519,1785,736,230
-2022-10-28,,"Chicago / Chicago Midway (MDW/KMDW)","Richmond / Richmond Byrd Fld (RIC/KRIC)",00:00:00,00:00:00,01:36:00,"Southwest Airlines (WN/SWA)","Boeing 737-700 (B737)",,,0,1,1,Nonrev,1785,2519,736,230
+2022-10-28,,"Chicago / Chicago Midway (MDW/KMDW)","Richmond / Richmond Byrd Fld (RIC/KRIC)",00:00:00,00:00:00,01:36:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Nonrev,1785,2519,736,0
 2022-03-13,,"Richmond / Richmond Byrd Fld (RIC/KRIC)","Atlanta / Hartsfield-Jackson (ATL/KATL)",00:00:00,00:00:00,01:17:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,2,Revenue,2519,179,736,0
 2022-03-13,,"Atlanta / Hartsfield-Jackson (ATL/KATL)","Dallas / Dallas Love Fld (DAL/KDAL)",00:00:00,00:00:00,01:48:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,2,Revenue,179,672,736,0
 2022-03-16,,"Dallas / Dallas Love Fld (DAL/KDAL)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,01:58:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,2,Revenue,672,1785,736,0
