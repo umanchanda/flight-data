@@ -58,7 +58,7 @@ function PageIntro({ kicker, title, children }) { return <div className="page-in
 function Metric({ label, value, detail }) { return <div className="metric"><span>{label}</span><strong>{value}</strong>{detail && <small>{detail}</small>}</div>; }
 
 function FlightsPage({ flights }) {
-  const [filters, setFilters] = useState({ years: [], airlines: [], aircraft: [], class: "", seatType: "", ticket: "", duration: null });
+  const [filters, setFilters] = useState({ years: [], airlines: [], aircraft: [], class: "", seatType: "", reason: "", ticket: "", duration: null });
   const [pageNum, setPageNum] = useState(1);
   const updateFilters = (next) => { setFilters(next); setPageNum(1); };
   const years = [...new Set(flights.map((flight) => dateValue(flight)?.getFullYear()).filter(Boolean))].sort((a, b) => b - a);
@@ -75,9 +75,10 @@ function FlightsPage({ flights }) {
     const aircraftMatch = !filters.aircraft.length || filters.aircraft.includes(flight.aircraft);
     const classMatch = !filters.class || flight.flight_class === filters.class;
     const seatTypeMatch = !filters.seatType || flight.seat_type === filters.seatType;
+    const reasonMatch = !filters.reason || flight.flight_reason === filters.reason;
     const durationMatch = !filters.duration || (toHours(flight) >= filters.duration[0] && toHours(flight) <= filters.duration[1]);
     const ticketMatch = !filters.ticket || (filters.ticket === "Nonrev" ? /nonrev/i.test(flight.note || "") : !/nonrev/i.test(flight.note || ""));
-    return yearMatch && airlineMatch && aircraftMatch && classMatch && seatTypeMatch && durationMatch && ticketMatch;
+    return yearMatch && airlineMatch && aircraftMatch && classMatch && seatTypeMatch && reasonMatch && durationMatch && ticketMatch;
   });
   const PAGE_SIZE = 50;
   const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
@@ -94,12 +95,13 @@ function FlightsPage({ flights }) {
   return <>
     <PageIntro kicker="Your flight log" title="Flights"><span className="record-count">{filtered.length} records</span></PageIntro>
     <section className="metrics"><Metric label="Total flights" value={filtered.length} /><Metric label="Hours flown" value={`${totalHours.toFixed(1)} h`} /><Metric label="Airlines" value={new Set(filtered.map((f) => f.airline)).size} /><Metric label="Airports visited" value={new Set(filtered.flatMap((f) => [f.from_airport, f.to_airport])).size} /></section>
-    <section className="filter-panel"><div className="filter-heading"><span>Filter your log</span><button className="clear-button" onClick={() => updateFilters({ years: [], airlines: [], aircraft: [], class: "", seatType: "", ticket: "", duration: null })}>Clear filters</button></div><div className="filters">
+    <section className="filter-panel"><div className="filter-heading"><span>Filter your log</span><button className="clear-button" onClick={() => updateFilters({ years: [], airlines: [], aircraft: [], class: "", seatType: "", reason: "", ticket: "", duration: null })}>Clear filters</button></div><div className="filters">
       <MultiSelect label="Year" options={years} selected={filters.years} onChange={(years) => updateFilters({ ...filters, years })} />
       <MultiSelect label="Airline" options={airlines} selected={filters.airlines} onChange={(airlines) => updateFilters({ ...filters, airlines })} />
       <MultiSelect label="Aircraft type" options={aircraftTypes} selected={filters.aircraft} onChange={(aircraft) => updateFilters({ ...filters, aircraft })} />
       <RadioGroup label="Class" name="class-filter" value={filters.class} options={classes} onChange={(value) => updateFilters({ ...filters, class: value })} />
       <RadioGroup label="Seat type" name="seat-type-filter" value={filters.seatType} options={seatTypes} onChange={(value) => updateFilters({ ...filters, seatType: value })} />
+      <RadioGroup label="Flight reason" name="reason-filter" value={filters.reason} options={["Personal", "Business"]} onChange={(value) => updateFilters({ ...filters, reason: value })} />
       <RadioGroup label="Ticket type" name="ticket-filter" value={filters.ticket} options={["Revenue", "Nonrev"]} onChange={(value) => updateFilters({ ...filters, ticket: value })} />
       <DurationFilter min={minDuration} max={maxDuration} value={filters.duration} onChange={(duration) => updateFilters({ ...filters, duration })} />
     </div></section>
@@ -136,7 +138,7 @@ function MultiSelect({ label, options, selected, onChange }) {
 function RadioGroup({ label, name, value, options, onChange }) {
   return <div className="radio-group"><span className="radio-group-label">{label}</span><div className="radio-group-options">
     <label><input type="radio" name={name} checked={value === ""} onChange={() => onChange("")} />All</label>
-    {options.map((option) => <label key={option}><input type="radio" name={name} checked={value === option} onChange={() => onChange(option)} />{option}</label>)}
+    {options.map((option) => { const optionValue = typeof option === "string" ? option : option.value; const optionLabel = typeof option === "string" ? option : option.label; return <label key={optionValue}><input type="radio" name={name} checked={value === optionValue} onChange={() => onChange(optionValue)} />{optionLabel}</label>; })}
   </div></div>;
 }
 
@@ -152,7 +154,7 @@ function DurationFilter({ min, max, value, onChange }) {
 function aggregate(items, keyFn, valueKey, valueFn = () => 1) { const result = {}; items.forEach((item) => { const key = keyFn(item); if (key) result[key] = (result[key] || 0) + valueFn(item); }); return Object.entries(result).map(([name, value]) => ({ name, [valueKey]: Number(value.toFixed?.(1) || value) })).sort((a, b) => b[valueKey] - a[valueKey]); }
 function Chart({ title, data, dataKey = "flights" }) { return <article className="chart-card"><div className="section-title"><h2>{title}</h2><span>{data.length} categories</span></div><ResponsiveContainer width="100%" height={220}><BarChart data={data} margin={{ top: 8, right: 8, bottom: 8, left: -20 }}><CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#dbe5ec" /><XAxis dataKey="name" tick={{ fontSize: 10, fill: "#617283" }} tickLine={false} axisLine={false} /><YAxis allowDecimals={false} tick={{ fontSize: 10, fill: "#617283" }} tickLine={false} axisLine={false} /><Tooltip cursor={{ fill: "#edf4f7" }} /><Bar dataKey={dataKey} fill="#ef8354" radius={[3, 3, 0, 0]} /></BarChart></ResponsiveContainer></article>; }
 
-function FlightTable({ flights }) { return <div className="table-wrap"><table><thead><tr><th>Date</th><th>Flight</th><th>Departure</th><th>Arrival</th><th>Dep</th><th>Arr</th><th>Airline</th><th>Aircraft</th><th>Reg</th><th>Duration</th><th>Class</th><th>Seat</th><th>Seat Type</th><th>Ticket</th></tr></thead><tbody>{flights.map((flight) => <tr key={flight.id}><td>{formatDate(flight.date)}</td><td className="mono">{flight.flight_number || "—"}</td><td><strong>{shortAirport(flight.from_airport)}</strong></td><td><strong>{shortAirport(flight.to_airport)}</strong></td><td className="mono">{formatTime(flight.dep_time)}</td><td className="mono">{formatTime(flight.arr_time)}</td><td>{flight.airline}</td><td>{flight.aircraft || "—"}</td><td className="mono">{flight.registration || "—"}</td><td>{toHours(flight).toFixed(1)} h</td><td><span className="tag">{flight.flight_class || "—"}</span></td><td className="mono">{flight.seat_number || "—"}</td><td>{flight.seat_type || "—"}</td><td><span className="tag">{isNonrev(flight) ? "Nonrev" : "Revenue"}</span></td></tr>)}</tbody></table>{!flights.length && <div className="empty">No flights match these filters.</div>}</div>; }
+function FlightTable({ flights }) { return <div className="table-wrap"><table><thead><tr><th>Date</th><th>Flight</th><th>Departure</th><th>Arrival</th><th>Dep</th><th>Arr</th><th>Airline</th><th>Aircraft</th><th>Reg</th><th>Duration</th><th>Class</th><th>Seat</th><th>Seat Type</th><th>Flight Reason</th><th>Ticket</th></tr></thead><tbody>{flights.map((flight) => <tr key={flight.id}><td>{formatDate(flight.date)}</td><td className="mono">{flight.flight_number || "—"}</td><td><strong>{shortAirport(flight.from_airport)}</strong></td><td><strong>{shortAirport(flight.to_airport)}</strong></td><td className="mono">{formatTime(flight.dep_time)}</td><td className="mono">{formatTime(flight.arr_time)}</td><td>{flight.airline}</td><td>{flight.aircraft || "—"}</td><td className="mono">{flight.registration || "—"}</td><td>{toHours(flight).toFixed(1)} h</td><td><span className="tag">{flight.flight_class || "—"}</span></td><td className="mono">{flight.seat_number || "—"}</td><td>{flight.seat_type || "—"}</td><td><span className="tag">{flight.flight_reason || "—"}</span></td><td><span className="tag">{isNonrev(flight) ? "Nonrev" : "Revenue"}</span></td></tr>)}</tbody></table>{!flights.length && <div className="empty">No flights match these filters.</div>}</div>; }
 function shortAirport(value) { const match = String(value || "").match(/\(([A-Z]{3})\//); return match?.[1] || value || "—"; }
 function formatTime(value) { return value ? String(value).slice(0, 5) : "—"; }
 function isNonrev(flight) { return /nonrev/i.test(flight.note || ""); }
