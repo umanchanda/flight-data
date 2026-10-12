@@ -192,10 +192,10 @@ Date,"Flight number",From,To,"Dep time","Arr time",Duration,Airline,Aircraft,Reg
 2010-12-29,,"Aguadilla / Rafael Hernandez (BQN/TJBQ)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,03:42:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,391,851,808,0
 2008-11-22,,"Akron/Canton / Akron/Canton (CAK/KCAK)","Boston / Logan (BOS/KBOS)",00:00:00,00:00:00,01:26:00,"AirTran Airways (FL/TRS)"," ()",,,0,1,1,Revenue,3621,380,790,0
 2008-11-30,,"Boston / Logan (BOS/KBOS)","Akron/Canton / Akron/Canton (CAK/KCAK)",00:00:00,00:00:00,01:26:00,"AirTran Airways (FL/TRS)"," ()",,,0,1,1,Revenue,380,3621,790,0
-2008-03-17,,"Milan / Malpensa (MXP/LIMC)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,08:56:00,"Continental Airlines (CO/COA)"," ()",,,0,1,1,Revenue,1983,851,196,0
+2008-03-17,,"Milan / Malpensa (MXP/LIMC)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,08:56:00,"Continental Airlines (CO/COA)","Boeing 767-200ER (B762)",,,0,1,1,Revenue,1983,851,196,2077
 2008-03-17,,"Newark / Liberty International (EWR/KEWR)","Cleveland / Hopkins (CLE/KCLE)",00:00:00,00:00:00,01:07:00,"Continental Airlines (CO/COA)"," ()",,,0,1,1,Revenue,851,568,196,0
 2008-03-07,,"Cleveland / Hopkins (CLE/KCLE)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,01:07:00,"Continental Airlines (CO/COA)"," ()",,,0,1,1,Revenue,568,851,196,0
-2008-03-07,,"Newark / Liberty International (EWR/KEWR)","Milan / Malpensa (MXP/LIMC)",00:00:00,00:00:00,08:56:00,"Continental Airlines (CO/COA)"," ()",,,0,1,1,Revenue,851,1983,196,0
+2008-03-07,,"Newark / Liberty International (EWR/KEWR)","Milan / Malpensa (MXP/LIMC)",00:00:00,00:00:00,08:56:00,"Continental Airlines (CO/COA)","Boeing 767-200ER (B762)",,,0,1,1,Revenue,851,1983,196,2077
 2007-08-27,CO83,"Delhi / Indira Gandhi (DEL/VIDP)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,16:08:00,"Continental Airlines (CO/COA)","Boeing 777-200ER (B77E)",,,0,1,1,Revenue,689,851,196,2024
 2007-08-28,,"Newark / Liberty International (EWR/KEWR)","Cleveland / Hopkins (CLE/KCLE)",00:00:00,00:00:00,01:07:00,"Continental Airlines (CO/COA)"," ()",,,0,1,1,Revenue,851,568,196,0
 2007-07-25,,"Cleveland / Hopkins (CLE/KCLE)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,01:07:00,"Continental Airlines (CO/COA)"," ()",,,0,1,1,Revenue,568,851,196,0
