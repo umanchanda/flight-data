@@ -151,9 +151,9 @@ Date,"Flight number",From,To,"Dep time","Arr time",Duration,Airline,Aircraft,Reg
 2017-08-20,,"Newark / Liberty International (EWR/KEWR)","Savannah / Savannah (SAV/KSAV)",00:00:00,00:00:00,01:47:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,851,2593,808,0
 2017-08-22,,"Savannah / Savannah (SAV/KSAV)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,01:47:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,2593,851,808,0
 2017-01-01,SU233,"Delhi / Indira Gandhi (DEL/VIDP)","Moscow / Sheremetyevo (SVO/UUEE)",00:00:00,00:00:00,06:08:00,"Aeroflot (SU/AFL)","Airbus A330-300 (A333)",,,0,1,1,Revenue,689,2816,33,31
-2017-01-02,SU100,"Moscow / Sheremetyevo (SVO/UUEE)","New York / John F Kennedy (JFK/KJFK)",00:00:00,00:00:00,10:21:00,"Aeroflot (SU/AFL)","Boeing 777-300ER (B77W)",VQBQE,,0,1,1,Revenue,2816,1328,33,2023
-2016-12-21,SU101,"New York / John F Kennedy (JFK/KJFK)","Moscow / Sheremetyevo (SVO/UUEE)",00:00:00,00:00:00,10:21:00,"Aeroflot (SU/AFL)","Boeing 777-300ER (B77W)",VPBGF,,0,1,1,Revenue,1328,2816,33,2023
-2016-12-22,SU232,"Moscow / Sheremetyevo (SVO/UUEE)","Delhi / Indira Gandhi (DEL/VIDP)",00:00:00,00:00:00,06:08:00,"Aeroflot (SU/AFL)","Airbus A330-300 (A333)",VPBDE,,0,1,1,Revenue,2816,689,33,31
+2017-01-02,SU100,"Moscow / Sheremetyevo (SVO/UUEE)","New York / John F Kennedy (JFK/KJFK)",00:00:00,00:00:00,10:21:00,"Aeroflot (SU/AFL)","Boeing 777-300ER (B77W)",VQ-BQE,,0,1,1,Revenue,2816,1328,33,2023
+2016-12-21,SU101,"New York / John F Kennedy (JFK/KJFK)","Moscow / Sheremetyevo (SVO/UUEE)",00:00:00,00:00:00,10:21:00,"Aeroflot (SU/AFL)","Boeing 777-300ER (B77W)",VP-BGF,,0,1,1,Revenue,1328,2816,33,2023
+2016-12-22,SU232,"Moscow / Sheremetyevo (SVO/UUEE)","Delhi / Indira Gandhi (DEL/VIDP)",00:00:00,00:00:00,06:08:00,"Aeroflot (SU/AFL)","Airbus A330-300 (A333)",VP-BDE,,0,1,1,Revenue,2816,689,33,31
 2014-12-15,,"Cleveland / Hopkins (CLE/KCLE)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,01:07:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,568,851,808,0
 2014-12-21,,"Sydney / Kingsford Smith (SYD/YSSY)","Cairns / Cairns (CNS/YBCS)",00:00:00,00:00:00,02:54:00,"Qantas Airways (QF/QFA)"," ()",,,0,1,1,Revenue,2834,591,631,0
 2014-12-24,,"Cairns / Cairns (CNS/YBCS)","Sydney / Kingsford Smith (SYD/YSSY)",00:00:00,00:00:00,02:54:00,"Qantas Airways (QF/QFA)"," ()",,,0,1,1,Revenue,591,2834,631,0
@@ -274,8 +274,8 @@ Date,"Flight number",From,To,"Dep time","Arr time",Duration,Airline,Aircraft,Reg
 2019-06-24,UA934,"Newark / Liberty International (EWR/KEWR)","London / Heathrow (LHR/EGLL)",08:20:00,20:40:00,07:20:00,"United Airlines (UA/UAL)","Boeing 767-300 (B763)",N78060,,0,1,1,Revenue,851,1618,808,244
 2017-12-30,EK209,"Athens / Eleftherios Venizelos (ATH/LGAV)","Newark / Liberty International (EWR/KEWR)",17:35:00,21:20:00,10:45:00,"Emirates (EK/UAE)","Boeing 777-300ER (B77W)",A6-ECF,,0,1,1,Revenue,3583,851,807,2023
 2017-12-23,EK210,"Newark / Liberty International (EWR/KEWR)","Athens / Eleftherios Venizelos (ATH/LGAV)",23:55:00,16:05:00,09:10:00,"Emirates (EK/UAE)","Boeing 777-300ER (B77W)",,,0,1,1,Revenue,851,3583,807,2023
-2017-12-24,FR1232,"Athens / Eleftherios Venizelos (ATH/LGAV)","Santorini / Santorini (JTR/LGSR)",06:55:00,07:45:00,00:50:00,"Ryanair (FR/RYR)","Boeing 737-800 (B738)",EIDWA,,0,1,1,Revenue,3583,1366,668,231
-2017-12-27,FR1233,"Santorini / Santorini (JTR/LGSR)","Athens / Eleftherios Venizelos (ATH/LGAV)",09:45:00,10:35:00,00:50:00,"Ryanair (FR/RYR)","Boeing 737-800 (B738)",EIDWA,,0,1,1,Revenue,1366,3583,668,231
+2017-12-24,FR1232,"Athens / Eleftherios Venizelos (ATH/LGAV)","Santorini / Santorini (JTR/LGSR)",06:55:00,07:45:00,00:50:00,"Ryanair (FR/RYR)","Boeing 737-800 (B738)",EI-DWA,,0,1,1,Revenue,3583,1366,668,231
+2017-12-27,FR1233,"Santorini / Santorini (JTR/LGSR)","Athens / Eleftherios Venizelos (ATH/LGAV)",09:45:00,10:35:00,00:50:00,"Ryanair (FR/RYR)","Boeing 737-800 (B738)",EI-DWA,,0,1,1,Revenue,1366,3583,668,231
 2014-08-04,UA36,"Newark / Liberty International (EWR/KEWR)","Edinburgh / Edinburgh (EDI/EGPH)",21:05:00,07:55:00,05:50:00,"United Airlines (UA/UAL)","Boeing 757-200 (B752)",N48127,,0,1,1,Revenue,851,785,808,241
 2014-08-13,UA37,"Edinburgh / Edinburgh (EDI/EGPH)","Newark / Liberty International (EWR/KEWR)",09:25:00,13:20:00,08:55:00,"United Airlines (UA/UAL)","Boeing 757-200 (B752)",N12109,,0,1,1,Revenue,785,851,808,241
 2014-12-17,MU588,"New York / John F Kennedy (JFK/KJFK)","Shanghai / Pudong (PVG/ZSPD)",16:25:00,19:15:00,14:50:00,"China Eastern Airlines (MU/CES)","Boeing 777-300ER (B77W)",,,0,1,1,Revenue,1328,3653,178,2023
