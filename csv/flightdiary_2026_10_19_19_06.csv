@@ -108,7 +108,7 @@ Date,"Flight number",From,To,"Dep time","Arr time",Duration,Airline,Aircraft,Reg
 2023-07-30,,"Chicago / Chicago Midway (MDW/KMDW)","Washington / Washington National (DCA/KDCA)",00:00:00,00:00:00,01:33:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Nonrev,1785,682,736,0
 2023-07-30,,"Washington / Dulles (IAD/KIAD)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,01:30:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Revenue,1202,1785,736,0
 2021-12-25,UA1462,"Newark / Liberty International (EWR/KEWR)","Montego Bay / Montego Bay (MBJ/MKJS)",08:40:00,12:13:34,03:37:00,"United Airlines (UA/UAL)","Boeing 737-900ER (B739)",N62896,,0,1,1,Revenue,851,1756,808,2069
-2021-12-31,,"Montego Bay / Montego Bay (MBJ/MKJS)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,03:37:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,1756,851,808,0
+2021-12-31,UA1628,"Montego Bay / Montego Bay (MBJ/MKJS)","Newark / Liberty International (EWR/KEWR)",16:47:00,20:31:00,02:44:00,"United Airlines (UA/UAL)","Boeing 737-900ER (B739)",N69816,,0,1,1,Revenue,1756,851,808,2069
 2019-04-11,,"Newark / Liberty International (EWR/KEWR)","Richmond / Richmond Byrd Fld (RIC/KRIC)",00:00:00,00:00:00,00:51:00,"United Airlines (UA/UAL)"," ()",,,0,1,2,Revenue,851,2519,808,0
 2019-04-12,,"Richmond / Richmond Byrd Fld (RIC/KRIC)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,00:51:00,"United Airlines (UA/UAL)"," ()",,,0,1,2,Revenue,2519,851,808,0
 2019-07-06,,"London / Heathrow (LHR/EGLL)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,07:45:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,1618,851,808,0
@@ -173,8 +173,6 @@ Date,"Flight number",From,To,"Dep time","Arr time",Duration,Airline,Aircraft,Reg
 2022-10-28,,"Chicago / Chicago Midway (MDW/KMDW)","Richmond / Richmond Byrd Fld (RIC/KRIC)",00:00:00,00:00:00,01:36:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Nonrev,1785,2519,736,0
 2022-03-13,,"Richmond / Richmond Byrd Fld (RIC/KRIC)","Atlanta / Hartsfield-Jackson (ATL/KATL)",00:00:00,00:00:00,01:17:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,2,Revenue,2519,179,736,0
 2022-03-13,,"Atlanta / Hartsfield-Jackson (ATL/KATL)","Dallas / Dallas Love Fld (DAL/KDAL)",00:00:00,00:00:00,01:48:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,2,Revenue,179,672,736,0
-2022-03-16,,"Dallas / Dallas Love Fld (DAL/KDAL)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,01:58:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,2,Revenue,672,1785,736,0
-2022-03-16,,"Chicago / Chicago Midway (MDW/KMDW)","Richmond / Richmond Byrd Fld (RIC/KRIC)",00:00:00,00:00:00,01:36:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,2,Revenue,1785,2519,736,0
 2022-10-08,WN1342,"Chicago / Chicago Midway (MDW/KMDW)","Dallas / Dallas Love Fld (DAL/KDAL)",12:25:00,14:45:00,02:20:00,"Southwest Airlines (WN/SWA)","Boeing 737-800 (B738)",N8612K,,0,1,1,Nonrev,1785,672,736,231
 2023-12-11,,"Chicago / Chicago Midway (MDW/KMDW)","Dallas / Dallas Love Fld (DAL/KDAL)",00:00:00,00:00:00,01:58:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,2,Revenue,1785,672,736,0
 2023-12-15,,"Dallas / Dallas Love Fld (DAL/KDAL)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,01:58:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,2,Revenue,672,1785,736,0
@@ -281,3 +279,7 @@ Date,"Flight number",From,To,"Dep time","Arr time",Duration,Airline,Aircraft,Reg
 2026-09-17,WN668,"Dallas / Dallas Love Fld (DAL/KDAL)","Chicago / Chicago Midway (MDW/KMDW)",21:10:00,23:25:00,02:15:00,"Southwest Airlines (WN/SWA)","Boeing 737 MAX 8 (B38M)",N8957Q,1F,1,1,2,Revenue,672,1785,736,2123
 2011-07-05,,"Delhi / Indira Gandhi (DEL/VIDP)","Bangalore / Bengaluru (BLR/VOBL)",00:00:00,00:00:00,02:33:00,"Air India (AI/AIC)"," ()",,,0,1,1,Revenue,689,4846,43,0
 2011-07-10,,"Bangalore / Bengaluru (BLR/VOBL)","Delhi / Indira Gandhi (DEL/VIDP)",00:00:00,00:00:00,02:33:00,"Air India (AI/AIC)"," ()",,,0,1,1,Revenue,4846,689,43,0
+2026-10-20,AA2549,"Chicago / O'Hare (ORD/KORD)","Newark / Liberty International (EWR/KEWR)",20:07:00,23:29:00,02:22:00,"American Airlines (AA/AAL)","Boeing 737-800 (B738)",N845NN,,0,1,1,Nonrev,2205,851,4,231
+2022-03-16,,"Dallas / Dallas Love Fld (DAL/KDAL)","Houston / William P Hobby (HOU/KHOU)",00:00:00,00:00:00,00:46:00,"Southwest Airlines (WN/SWA)"," ()",,1F,3,1,2,Revenue,672,1165,736,0
+2022-03-16,,"Houston / William P Hobby (HOU/KHOU)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,02:17:00,"Southwest Airlines (WN/SWA)"," ()",,1F,3,1,2,Revenue,1165,1785,736,0
+2022-03-16,,"Chicago / Chicago Midway (MDW/KMDW)","Richmond / Richmond Byrd Fld (RIC/KRIC)",00:00:00,00:00:00,01:36:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,2,Revenue,1785,2519,736,0
