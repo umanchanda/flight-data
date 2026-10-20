@@ -54,8 +54,6 @@ Date,"Flight number",From,To,"Dep time","Arr time",Duration,Airline,Aircraft,Reg
 2024-06-17,WN4580,"New York / La Guardia (LGA/KLGA)","Chicago / Chicago Midway (MDW/KMDW)",21:47:00,22:35:00,01:49:00,"Southwest Airlines (WN/SWA)","Boeing 737-700 (B737)",N277WN,,0,1,1,Nonrev,1605,1785,736,230
 2024-05-12,WN3079,"Dallas / Dallas Love Fld (DAL/KDAL)","Chicago / Chicago Midway (MDW/KMDW)",07:32:00,09:26:00,01:58:00,"Southwest Airlines (WN/SWA)","Boeing 737-800 (B738)",N8613K,,0,1,1,Nonrev,672,1785,736,231
 2024-05-10,WN5190,"Chicago / Chicago Midway (MDW/KMDW)","Dallas / Dallas Love Fld (DAL/KDAL)",20:44:00,22:48:00,01:58:00,"Southwest Airlines (WN/SWA)","Boeing 737 MAX 8 (B38M)",N8803L,,0,1,1,Nonrev,1785,672,736,2123
-2024-05-11,AA3926,"Dallas-Ft Worth / Dallas-Ft Worth (DFW/KDFW)","College Station / Easterwood Fld (CLL/KCLL)",00:00:00,00:00:00,00:36:00,"American Airlines (AA/AAL)","Embraer ERJ-175 (E175)",,,0,1,1,Revenue,695,571,4,2015
-2024-05-11,AA3485,"College Station / Easterwood Fld (CLL/KCLL)","Dallas-Ft Worth / Dallas-Ft Worth (DFW/KDFW)",00:00:00,00:00:00,00:36:00,"American Airlines (AA/AAL)","Embraer ERJ-175 (E175)",,,0,1,1,Revenue,571,695,4,2015
 2024-04-19,WN667,"Chicago / Chicago Midway (MDW/KMDW)","Kansas City / Kansas City (MCI/KMCI)",22:14:00,23:37:00,01:07:00,"Southwest Airlines (WN/SWA)","Boeing 737-800 (B738)",N8541W,,0,1,1,Nonrev,1785,1765,736,231
 2024-04-21,,"Kansas City / Kansas City (MCI/KMCI)","Chicago / Chicago Midway (MDW/KMDW)",00:00:00,00:00:00,01:07:00,"Southwest Airlines (WN/SWA)"," ()",,,0,1,1,Revenue,1765,1785,736,0
 2024-04-08,WN4167,"Austin / Robert Mueller (AUS/KAUS)","Chicago / Chicago Midway (MDW/KMDW)",20:25:00,22:36:00,02:21:00,"Southwest Airlines (WN/SWA)","Boeing 737-700 (B737)",N7813P,,0,1,1,Nonrev,190,1785,736,230
@@ -111,8 +109,6 @@ Date,"Flight number",From,To,"Dep time","Arr time",Duration,Airline,Aircraft,Reg
 2021-12-31,UA1628,"Montego Bay / Montego Bay (MBJ/MKJS)","Newark / Liberty International (EWR/KEWR)",16:47:00,20:31:00,02:44:00,"United Airlines (UA/UAL)","Boeing 737-900ER (B739)",N69816,,0,1,1,Revenue,1756,851,808,2069
 2019-04-11,,"Newark / Liberty International (EWR/KEWR)","Richmond / Richmond Byrd Fld (RIC/KRIC)",00:00:00,00:00:00,00:51:00,"United Airlines (UA/UAL)"," ()",,,0,1,2,Revenue,851,2519,808,0
 2019-04-12,,"Richmond / Richmond Byrd Fld (RIC/KRIC)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,00:51:00,"United Airlines (UA/UAL)"," ()",,,0,1,2,Revenue,2519,851,808,0
-2019-07-06,UA15,"London / Heathrow (LHR/EGLL)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,07:45:00,"United Airlines (UA/UAL)","Boeing 767-300ER (B763)",,,0,1,1,Revenue,1618,851,808,2078
-2019-06-24,UA934,"Newark / Liberty International (EWR/KEWR)","London / Heathrow (LHR/EGLL)",00:00:00,00:00:00,07:45:00,"United Airlines (UA/UAL)","Boeing 767-300ER (B763)",,,0,1,1,Revenue,851,1618,808,2078
 2019-02-15,AS163,"Newark / Liberty International (EWR/KEWR)","San Francisco / San Francisco International (SFO/KSFO)",07:20:00,11:15:00,06:55:00,"Alaska Airlines (AS/ASA)","Boeing 737-900ER (B739)",N413AS,33F,1,1,1,Revenue,851,2644,79,2069
 2019-02-18,,"San Francisco / San Francisco International (SFO/KSFO)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,05:48:00,"Alaska Airlines (AS/ASA)"," ()",,,0,1,1,Revenue,2644,851,79,0
 2021-08-10,,"Richmond / Richmond Byrd Fld (RIC/KRIC)","Houston / George Bush Intercontinental (IAH/KIAH)",00:00:00,00:00:00,02:45:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,2519,1204,808,0
@@ -152,19 +148,13 @@ Date,"Flight number",From,To,"Dep time","Arr time",Duration,Airline,Aircraft,Reg
 2018-07-27,,"Chicago / O'Hare (ORD/KORD)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,01:48:00,"United Airlines (UA/UAL)"," ()",,,0,1,2,Revenue,2205,851,808,0
 2018-02-16,,"Newark / Liberty International (EWR/KEWR)","San Francisco / San Francisco International (SFO/KSFO)",00:00:00,00:00:00,05:48:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,851,2644,808,0
 2018-02-19,,"San Francisco / San Francisco International (SFO/KSFO)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,05:48:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,2644,851,808,0
-2017-12-23,EK210,"Newark / Liberty International (EWR/KEWR)","Athens / Eleftherios Venizelos (ATH/LGAV)",00:00:00,00:00:00,11:00:00,"Emirates (EK/UAE)","Boeing 777-300ER (B77W)",,,0,1,1,Revenue,851,3583,807,2023
-2017-12-30,EK209,"Athens / Eleftherios Venizelos (ATH/LGAV)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,11:00:00,"Emirates (EK/UAE)","Boeing 777-300ER (B77W)",,,0,1,1,Revenue,3583,851,807,2023
 2017-08-20,,"Newark / Liberty International (EWR/KEWR)","Savannah / Savannah (SAV/KSAV)",00:00:00,00:00:00,01:47:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,851,2593,808,0
 2017-08-22,,"Savannah / Savannah (SAV/KSAV)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,01:47:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,2593,851,808,0
 2017-01-01,SU233,"Delhi / Indira Gandhi (DEL/VIDP)","Moscow / Sheremetyevo (SVO/UUEE)",00:00:00,00:00:00,06:08:00,"Aeroflot (SU/AFL)","Airbus A330-300 (A333)",,,0,1,1,Revenue,689,2816,33,31
-2017-01-02,SU100,"Moscow / Sheremetyevo (SVO/UUEE)","New York / John F Kennedy (JFK/KJFK)",00:00:00,00:00:00,10:21:00,"Aeroflot (SU/AFL)","Boeing 777-300ER (B77W)",,,0,1,1,Revenue,2816,1328,33,2023
-2016-12-21,SU101,"New York / John F Kennedy (JFK/KJFK)","Moscow / Sheremetyevo (SVO/UUEE)",00:00:00,00:00:00,10:21:00,"Aeroflot (SU/AFL)","Boeing 777-300ER (B77W)",,,0,1,1,Revenue,1328,2816,33,2023
-2016-12-22,SU232,"Moscow / Sheremetyevo (SVO/UUEE)","Delhi / Indira Gandhi (DEL/VIDP)",00:00:00,00:00:00,06:08:00,"Aeroflot (SU/AFL)","Airbus A330-300 (A333)",,,0,1,1,Revenue,2816,689,33,31
+2017-01-02,SU100,"Moscow / Sheremetyevo (SVO/UUEE)","New York / John F Kennedy (JFK/KJFK)",00:00:00,00:00:00,10:21:00,"Aeroflot (SU/AFL)","Boeing 777-300ER (B77W)",VQBQE,,0,1,1,Revenue,2816,1328,33,2023
+2016-12-21,SU101,"New York / John F Kennedy (JFK/KJFK)","Moscow / Sheremetyevo (SVO/UUEE)",00:00:00,00:00:00,10:21:00,"Aeroflot (SU/AFL)","Boeing 777-300ER (B77W)",VPBGF,,0,1,1,Revenue,1328,2816,33,2023
+2016-12-22,SU232,"Moscow / Sheremetyevo (SVO/UUEE)","Delhi / Indira Gandhi (DEL/VIDP)",00:00:00,00:00:00,06:08:00,"Aeroflot (SU/AFL)","Airbus A330-300 (A333)",VPBDE,,0,1,1,Revenue,2816,689,33,31
 2014-12-15,,"Cleveland / Hopkins (CLE/KCLE)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,01:07:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,568,851,808,0
-2014-12-17,MU588,"New York / John F Kennedy (JFK/KJFK)","Shanghai / Pudong (PVG/ZSPD)",00:00:00,00:00:00,16:17:00,"China Eastern Airlines (MU/CES)","Boeing 777-300ER (B77W)",,,0,1,1,Revenue,1328,3653,178,2023
-2014-12-18,MU561,"Shanghai / Pudong (PVG/ZSPD)","Sydney / Kingsford Smith (SYD/YSSY)",00:00:00,00:00:00,10:52:00,"China Eastern Airlines (MU/CES)","Airbus A330-200 (A332)",,,0,1,1,Revenue,3653,2834,178,30
-2014-12-30,MU562,"Sydney / Kingsford Smith (SYD/YSSY)","Shanghai / Pudong (PVG/ZSPD)",00:00:00,00:00:00,10:52:00,"China Eastern Airlines (MU/CES)","Airbus A330-200 (A332)",,,0,1,1,Revenue,2834,3653,178,30
-2014-12-31,MU587,"Shanghai / Pudong (PVG/ZSPD)","New York / John F Kennedy (JFK/KJFK)",00:00:00,00:00:00,16:17:00,"China Eastern Airlines (MU/CES)","Boeing 777-300ER (B77W)",,,0,1,1,Revenue,3653,1328,178,2023
 2014-12-21,,"Sydney / Kingsford Smith (SYD/YSSY)","Cairns / Cairns (CNS/YBCS)",00:00:00,00:00:00,02:54:00,"Qantas Airways (QF/QFA)"," ()",,,0,1,1,Revenue,2834,591,631,0
 2014-12-24,,"Cairns / Cairns (CNS/YBCS)","Sydney / Kingsford Smith (SYD/YSSY)",00:00:00,00:00:00,02:54:00,"Qantas Airways (QF/QFA)"," ()",,,0,1,1,Revenue,591,2834,631,0
 2015-12-25,,"Newark / Liberty International (EWR/KEWR)","San Francisco / San Francisco International (SFO/KSFO)",00:00:00,00:00:00,05:48:00,"United Airlines (UA/UAL)"," ()",,,0,1,1,Revenue,851,2644,808,0
@@ -202,8 +192,6 @@ Date,"Flight number",From,To,"Dep time","Arr time",Duration,Airline,Aircraft,Reg
 2006-01-01,,"Newark / Liberty International (EWR/KEWR)","Cleveland / Hopkins (CLE/KCLE)",00:00:00,00:00:00,01:07:00,"Continental Airlines (CO/COA)"," ()",,,0,1,1,Revenue,851,568,196,0
 2012-04-07,F91445,"Allentown / Lehigh Valley (ABE/KABE)","Orlando / Orlando (MCO/KMCO)",00:00:00,00:00:00,02:13:00,"Frontier Airlines (F9/FFT)","Airbus A319-100 (A319)",,,0,1,1,Revenue,3708,1768,302,2073
 2012-04-14,F91444,"Orlando / Orlando (MCO/KMCO)","Allentown / Lehigh Valley (ABE/KABE)",00:00:00,00:00:00,02:13:00,"Frontier Airlines (F9/FFT)","Airbus A319-100 (A319)",,,0,1,1,Revenue,1768,3708,302,2073
-2017-12-24,FR1232,"Athens / Eleftherios Venizelos (ATH/LGAV)","Santorini / Santorini (JTR/LGSR)",00:00:00,00:00:00,00:32:00,"Ryanair (FR/RYR)","Boeing 737-800 (B738)",,,0,1,1,Revenue,3583,1366,668,231
-2017-12-27,FR1233,"Santorini / Santorini (JTR/LGSR)","Athens / Eleftherios Venizelos (ATH/LGAV)",00:00:00,00:00:00,00:32:00,"Ryanair (FR/RYR)","Boeing 737-800 (B738)",,,0,1,1,Revenue,1366,3583,668,231
 2022-10-15,WN2558,"Dallas / Dallas Love Fld (DAL/KDAL)","Chicago / Chicago Midway (MDW/KMDW)",12:21:00,14:17:13,01:58:00,"Southwest Airlines (WN/SWA)","Boeing 737-700 (B737)",N763SW,,0,1,1,Nonrev,672,1785,736,230
 2022-08-19,UA2033,"Chicago / O'Hare (ORD/KORD)","Newark / Liberty International (EWR/KEWR)",18:20:00,21:33:00,01:48:00,"United Airlines (UA/UAL)","Boeing 737-900ER (B739)",N78448,,0,1,1,Revenue,2205,851,808,2069
 2022-08-27,UA1232,"Newark / Liberty International (EWR/KEWR)","Chicago / O'Hare (ORD/KORD)",18:35:00,19:37:00,01:48:00,"United Airlines (UA/UAL)","Airbus A319-100 (A319)",N805UA,,0,1,1,Revenue,851,2205,808,2073
@@ -257,8 +245,6 @@ Date,"Flight number",From,To,"Dep time","Arr time",Duration,Airline,Aircraft,Reg
 2026-05-14,WN210,"Dallas / Dallas Love Fld (DAL/KDAL)","Chicago / Chicago Midway (MDW/KMDW)",19:05:00,21:15:00,02:10:00,"Southwest Airlines (WN/SWA)","Boeing 737-800 (B738)",N8802Q,3B,2,1,2,Revenue,672,1785,736,231
 2006-12-21,CO403,"Cleveland / Hopkins (CLE/KCLE)","San Francisco / San Francisco International (SFO/KSFO)",00:00:00,00:00:00,04:56:00,"Continental Airlines (CO/COA)","Boeing 737-800 (B738)",,,0,1,1,Revenue,568,2644,196,231
 2006-12-30,CO353,"San Francisco / San Francisco International (SFO/KSFO)","Cleveland / Hopkins (CLE/KCLE)",00:00:00,00:00:00,04:56:00,"Continental Airlines (CO/COA)","Boeing 737-800 (B738)",,,0,1,1,Revenue,2644,568,196,231
-2014-08-04,UA36,"Newark / Liberty International (EWR/KEWR)","Edinburgh / Edinburgh (EDI/EGPH)",00:00:00,00:00:00,07:20:00,"United Airlines (UA/UAL)","Boeing 757-200 (B752)",,,0,1,1,Revenue,851,785,808,241
-2014-08-13,UA37,"Edinburgh / Edinburgh (EDI/EGPH)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,07:20:00,"United Airlines (UA/UAL)","Boeing 757-200 (B752)",,,0,1,1,Revenue,785,851,808,241
 2026-06-17,WN2661,"Chicago / Chicago Midway (MDW/KMDW)","Dallas / Dallas Love Fld (DAL/KDAL)",05:05:00,07:20:00,02:15:00,"Southwest Airlines (WN/SWA)","Boeing 737 MAX 8 (B38M)",N8707P,14F,1,1,1,Nonrev,1785,672,736,2123
 2026-06-17,WN1359,"Dallas / Dallas Love Fld (DAL/KDAL)","Chicago / Chicago Midway (MDW/KMDW)",21:55:00,00:05:00,02:10:00,"Southwest Airlines (WN/SWA)","Boeing 737-800 (B738)",N8519R,6C,3,1,1,Revenue,672,1785,736,231
 2026-06-21,WN973,"Chicago / Chicago Midway (MDW/KMDW)","Atlanta / Hartsfield-Jackson (ATL/KATL)",07:00:00,09:50:00,01:50:00,"Southwest Airlines (WN/SWA)","Boeing 737-800 (B738)",N8306H,7D,3,1,1,Revenue,1785,179,736,231
@@ -282,3 +268,17 @@ Date,"Flight number",From,To,"Dep time","Arr time",Duration,Airline,Aircraft,Reg
 2007-08-27,CO83,"Delhi / Indira Gandhi (DEL/VIDP)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,16:08:00,"Continental Airlines (CO/COA)","Boeing 777-200ER (B77E)",,,0,1,1,Revenue,689,851,196,2024
 2008-03-07,CO44,"Newark / Liberty International (EWR/KEWR)","Milan / Malpensa (MXP/LIMC)",00:00:00,00:00:00,08:56:00,"Continental Airlines (CO/COA)","Boeing 767-200ER (B762)",,,0,1,1,Revenue,851,1983,196,2077
 2008-03-17,CO45,"Milan / Malpensa (MXP/LIMC)","Newark / Liberty International (EWR/KEWR)",00:00:00,00:00:00,08:56:00,"Continental Airlines (CO/COA)","Boeing 767-200ER (B762)",,,0,1,1,Revenue,1983,851,196,2077
+2024-05-11,AA3485,"College Station / Easterwood Fld (CLL/KCLL)","Dallas-Ft Worth / Dallas-Ft Worth (DFW/KDFW)",17:57:00,19:15:00,01:18:00,"American Airlines (AA/AAL)","Embraer 175 (E75S)",,,0,1,1,Revenue,571,695,4,2145
+2024-05-11,AA3926,"Dallas-Ft Worth / Dallas-Ft Worth (DFW/KDFW)","College Station / Easterwood Fld (CLL/KCLL)",09:25:00,10:29:00,01:04:00,"American Airlines (AA/AAL)","Embraer 175 (E75S)",N256NN,,0,1,1,Revenue,695,571,4,2145
+2019-07-06,UA15,"London / Heathrow (LHR/EGLL)","Newark / Liberty International (EWR/KEWR)",15:20:00,18:40:00,08:20:00,"United Airlines (UA/UAL)","Boeing 767-300 (B763)",N670UA,,0,1,1,Revenue,1618,851,808,244
+2019-06-24,UA934,"Newark / Liberty International (EWR/KEWR)","London / Heathrow (LHR/EGLL)",08:20:00,20:40:00,07:20:00,"United Airlines (UA/UAL)","Boeing 767-300 (B763)",N78060,,0,1,1,Revenue,851,1618,808,244
+2017-12-30,EK209,"Athens / Eleftherios Venizelos (ATH/LGAV)","Newark / Liberty International (EWR/KEWR)",17:35:00,21:20:00,10:45:00,"Emirates (EK/UAE)","Boeing 777-300ER (B77W)",A6-ECF,,0,1,1,Revenue,3583,851,807,2023
+2017-12-23,EK210,"Newark / Liberty International (EWR/KEWR)","Athens / Eleftherios Venizelos (ATH/LGAV)",23:55:00,16:05:00,09:10:00,"Emirates (EK/UAE)","Boeing 777-300ER (B77W)",,,0,1,1,Revenue,851,3583,807,2023
+2017-12-24,FR1232,"Athens / Eleftherios Venizelos (ATH/LGAV)","Santorini / Santorini (JTR/LGSR)",06:55:00,07:45:00,00:50:00,"Ryanair (FR/RYR)","Boeing 737-800 (B738)",EIDWA,,0,1,1,Revenue,3583,1366,668,231
+2017-12-27,FR1233,"Santorini / Santorini (JTR/LGSR)","Athens / Eleftherios Venizelos (ATH/LGAV)",09:45:00,10:35:00,00:50:00,"Ryanair (FR/RYR)","Boeing 737-800 (B738)",EIDWA,,0,1,1,Revenue,1366,3583,668,231
+2014-08-04,UA36,"Newark / Liberty International (EWR/KEWR)","Edinburgh / Edinburgh (EDI/EGPH)",21:05:00,07:55:00,05:50:00,"United Airlines (UA/UAL)","Boeing 757-200 (B752)",N48127,,0,1,1,Revenue,851,785,808,241
+2014-08-13,UA37,"Edinburgh / Edinburgh (EDI/EGPH)","Newark / Liberty International (EWR/KEWR)",09:25:00,13:20:00,08:55:00,"United Airlines (UA/UAL)","Boeing 757-200 (B752)",N12109,,0,1,1,Revenue,785,851,808,241
+2014-12-17,MU588,"New York / John F Kennedy (JFK/KJFK)","Shanghai / Pudong (PVG/ZSPD)",16:25:00,19:15:00,14:50:00,"China Eastern Airlines (MU/CES)","Boeing 777-300ER (B77W)",,,0,1,1,Revenue,1328,3653,178,2023
+2014-12-18,MU561,"Shanghai / Pudong (PVG/ZSPD)","Sydney / Kingsford Smith (SYD/YSSY)",20:40:00,10:00:00,10:20:00,"China Eastern Airlines (MU/CES)","Airbus A350-900 (A359)",,,0,1,1,Revenue,3653,2834,178,2110
+2014-12-30,MU562,"Sydney / Kingsford Smith (SYD/YSSY)","Shanghai / Pudong (PVG/ZSPD)",12:00:00,19:35:00,10:35:00,"China Eastern Airlines (MU/CES)","Airbus A350-900 (A359)",,,0,1,1,Revenue,2834,3653,178,2110
+2014-12-31,MU587,"Shanghai / Pudong (PVG/ZSPD)","New York / John F Kennedy (JFK/KJFK)",11:30:00,14:25:00,14:55:00,"China Eastern Airlines (MU/CES)","Boeing 777-300ER (B77W)",,,0,1,1,Revenue,3653,1328,178,2023
